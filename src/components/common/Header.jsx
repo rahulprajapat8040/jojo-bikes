@@ -32,7 +32,7 @@ const Header = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2 }}
-        className="flex justify-center fixed z-10 inset-0 items-center bg-white shadow-lg h-20"
+        className="flex justify-center fixed z-50 inset-0 items-center bg-white shadow-lg h-20"
       >
         <div className="max-w-6xl w-full flex justify-center px-2 ">
           <nav className="w-full">
