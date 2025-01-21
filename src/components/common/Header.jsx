@@ -14,7 +14,7 @@ const Header = () => {
     },
     {
       name: "Bike Rent",
-      url: "/about-jojo-bikes",
+      url: "/bike-rent-in-jaipur",
     },
     {
       name: "Scooter Rent",

@@ -44,6 +44,7 @@ const Testimonial = ({ data }) => {
           </div>
           <div className="py-4 my-2 flex justify-center">
             <motion.button
+            
               whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 100, damping: 10 }}
               whileTap={{scale: 0.9}}
