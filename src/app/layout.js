@@ -1,6 +1,7 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/common/Header";
+import Footer from "@/components/common/Footer";
 
 
 const poppins = Poppins({
@@ -21,6 +22,7 @@ const poppins = Poppins({
 
         <Header />
         {children}
+        <Footer />
       </body>
     </html >
   );

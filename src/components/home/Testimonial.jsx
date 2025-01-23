@@ -1,5 +1,6 @@
 'use client'
 import { useInView, motion } from "motion/react";
+import Link from "next/link";
 import { useRef } from "react";
 import { FaTripadvisor } from "react-icons/fa";
 
@@ -7,7 +8,7 @@ import { FaTripadvisor } from "react-icons/fa";
 const Testimonial = ({ data }) => {
   return (
     <>
-      <section className="py-8">
+      <section className="py-8 bg-white">
         <div className="max-w-6xl px-4 mx-auto">
           <div className="text-center mb-8">
             <h1 className="text-3xl md:text-5xl drop-shadow-lg font-extrabold text-primaryColor">LATEST TESTIMONIAL</h1>
@@ -43,15 +44,17 @@ const Testimonial = ({ data }) => {
             })}
           </div>
           <div className="py-4 my-2 flex justify-center">
+            <Link href={'https://www.tripadvisor.in/Attraction_Review-g304555-d23635096-Reviews-Jojo_Travel-Jaipur_Jaipur_District_Rajasthan.html'} target="_blank">
             <motion.button
             
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: "spring", stiffness: 100, damping: 10 }}
-              whileTap={{scale: 0.9}}
-              className="flex items-center gap-3 text-sm sm:text-lg rounded-full border border-gray-400 font-semibold bg-white drop-shadow-2xl px-4 py-3"
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 100, damping: 10 }}
+            whileTap={{scale: 0.9}}
+            className="flex items-center text-black gap-3 text-sm sm:text-lg rounded-full border border-gray-400 font-semibold bg-white drop-shadow-2xl px-4 py-3"
             >
               <FaTripadvisor size={25} color="green" /> View Our Trip Advisor Review
             </motion.button>
+              </Link>
           </div>
         </div>
       </section>

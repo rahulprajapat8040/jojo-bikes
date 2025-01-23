@@ -1,4 +1,7 @@
+import BikeSlider from "@/components/bike-rent/BikeSlider"
 import Hero from "@/components/bike-rent/Hero"
+import RentalBike from "@/components/common/RentalBike"
+import SectionData from "@/components/common/SectionData"
 
 const BikeRentInJaipur = () => {
 
@@ -59,7 +62,7 @@ Are you planning to hire rental Bullet to roam on the streets of the beautiful c
 \n
 Jaipur the capital of Rajasthan state is famous for its traditional and royal culture, arcade palaces, gardens, museums, and different buildings. You can see the splendid forts, major tourist attractions including Hawa Mahal, Jantar Mantar, Albert Hall, and many more places to visit in the pick city. There are numerous benefits to hiring Bullet on rent in Jaipur as these bike are cost-effective, and provides you the guarantee of a great adventure throughout the trip. `,
             img: '/assets/bullet-on-rent-in-jaipur.jpg'
-        }, 
+        },
         {
             title: `
 royal enfield on rent in Jaipur
@@ -73,13 +76,187 @@ Royal Enfield is an adventurous motorcycle segment company that can travel the w
 \n
 Jojo Travel provides the best offer of Royal Enfield on rent in Jaipur. We offer the Royal Enfield for royal persons to roam around the Jaipur - The pink city of India. We provide the perfect services to the customers by providing them with 24*7 support assistance. Our customers can immediately book a Royal Enfield in a few minutes at affordable prices. Jojo Travel mainly focuses on customer satisfaction.
 `,
-            img: 'royal-enfield-on-rent-in-jaipur.jpg'
+            img: '/assets/royal-enfield-on-rent-in-jaipur.jpg'
         }
     ]
 
+    const BikesOnRent = {
+        title: 'Bikes On Rent',
+        Bikes: [
+            {
+                id: "1",
+                title: "Royal Enfield 350",
+                transmission: "Automatic",
+                Fuel: "Petrol",
+                Passenger: "1",
+                image: "/assets/bike-on-rent-in-jaipur.jpg",
+            },
+            {
+                id: "2",
+                title: "KTM Duke ",
+                transmission: "Automatic",
+                Fuel: "Petrol",
+                Passenger: "2",
+                image: "/assets/ktm-duke-best-offer.jpg",
+            },
+            {
+                id: "3",
+                title: "Yamaha R15 ",
+                transmission: "Automatic",
+                Fuel: "Petrol",
+                Passenger: "2",
+                image: "/assets/bike-rent-in-jaipur-near-me.jpg",
+            },
+            {
+                id: "4",
+                title: "KTM 390 Duke",
+                transmission: "Automatic",
+                Fuel: "Petrol",
+                Passenger: "2",
+                image: "/assets/hire-ktm-bike-on-rent-in-jaipur.jpg",
+            },
+            {
+                id: "5",
+                title: "KTM RC 200",
+                transmission: "Automatic",
+                Fuel: "Petrol",
+                Passenger: "2",
+                image: "/assets/affordable-ktm-bike-on-rent-in-jaipur.jpg",
+            },
+            {
+                id: "6",
+                title: "KTM 125 Duke",
+                transmission: "Automatic",
+                Fuel: "Petrol",
+                Passenger: "2",
+                image: "/assets/rent-in-jaipur-ktm-bike.png",
+            },
+            {
+                id: "7",
+                title: "Harley Davidson Fat Bob",
+                transmission: "Automatic",
+                Fuel: "Petrol",
+                Passenger: "2",
+                image: "/assets/hire-harley-davidson-bike-on-rent-in-jaipur.jpg",
+            },
+            {
+                id: "8",
+                title: "Harley Davidson Street Bob",
+                transmission: "Automatic",
+                Fuel: "Petrol",
+                Passenger: "2",
+                image: "/assets/affordable-harley-davidson-bike-on-rent-in-jaipur.jpg",
+            },
+            {
+                id: "9",
+                title: "Harley Davidson PAN",
+                transmission: "Automatic",
+                Fuel: "Petrol",
+                Passenger: "2",
+                image: "/assets/bike-on-rent-in-jaipur-harley-davidson.jpg",
+            },
+            {
+                id: "10",
+                title: "Yamaha FZ-Fi ",
+                transmission: "Automatic",
+                Fuel: "Petrol",
+                Passenger: "2",
+                image: "/assets/affordable-two-wheeler-on-rent-in-jaipur.jpg",
+            },
+            {
+                id: "11",
+                title: "Honda Hornet 2.0",
+                transmission: "Automatic",
+                Fuel: "Petrol",
+                Passenger: "2",
+                image: "/assets/hire-two-wheeler-on-rent-in-jaipur.jpg",
+            },
+            {
+                id: "12",
+                title: "Honda SP 125",
+                transmission: "Automatic",
+                Fuel: "Petrol",
+                Passenger: "2",
+                image: "/assets/2-wheeler-on-rent-in-jaipur.jpg",
+            },
+            {
+                id: "13",
+                title: "Bullet Classic x 350",
+                transmission: "Automatic",
+                Fuel: "Petrol",
+                Passenger: "2",
+                image: "/assets/hire-bullet-on-rent-in-jaipur.jpg",
+            },
+            {
+                id: "14",
+                title: "Royal Enfield Classic BS6",
+                transmission: "Automatic",
+                Fuel: "Petrol",
+                Passenger: "1",
+                image: "/assets/affordable-bullet-on-rent-in-jaipur.jpg",
+            },
+            {
+                id: "15",
+                title: "Royal Enfield Classic 350",
+                transmission: "Automatic",
+                Fuel: "Petrol",
+                Passenger: "2",
+                image: "/assets/rent-in-Jaipur-bullet.jpg",
+            },
+
+
+        ]
+    }
+
+    const sectionData = [
+        {
+            id: 1,
+            title: `Travel in Jaipur with a Bike on Rent in Jaipur`,
+            description: `
+Jaipur is one of the top-rated destinations and hence a lot of tourists visit Pink city to experience its rich heritage. Though the city has many transportation facilities, traveling to Jaipur on bikes is a fun-filling activity in itself. While visiting Jaipur, you get to cross many narrow streets which allow you to explore this beautiful city in a far better way. For all of you who are traveling to Jaipur, and yes do not have any means to travel through those narrow lanes, a Bike on rent in Jaipur from JOJO travel is the best option for you. With bike rent Jaipur we provide amazing and well-maintained services as per your comfort. You can choose your bike for rent according to your preference to explore the culture and traditions of Jaipur. You can find online bike rent in Jaipur at JOJO travel at an affordable price.`
+        },
+        {
+            id: 2,
+            title: `Best Offers at JOJO Travels on Bike Rental in Jaipur`,
+            description: `Jojo travels provides various best offers for the bike on rent in Jaipur to travel. We provide bike rental in Jaipur to the rider at affordable prices with many offers or discounts to the customer. With the best offers or discounts to the customer, we provide various services such as home delivery, hassle-free booking, services bike, helmet service, and many more at affordable prices. Offering a range of Bike Rental in Jaipur that is easy to ride even on narrow streets of the market, we offer you multiple choices of bikes to choose from like Royal Enfield 350, Yamaha R15 and so many more.`
+        },
+        {
+            id: 3,
+            title: `Book Online Bike Rent in Jaipur in an Easy Way`,
+            description: `With affordable Rent For Bike In Jaipur at JOJO Travels booking a bike rent Jaipur is now very simple. Our main motive is only customer satisfaction, and for that, we offer exclusive services to make our customers feel special. We offer well-maintained bike on rent in Jaipur and deliver them to your doorstep according to your preference. If you traveling from another city to explore Jaipur then you can also pre-book your bike online before reaching the destination. As we deliver the vehicle to your destination so it will make your travel hassle-free and time-saving. Before booking the bike we also provide various options as per the comfort of the customer to satisfy them. You can easily book an online bike rent in Jaipur by Jojo Travel, save your time, and get many online goings offers. We have experienced or trained staff that will explain everything in an informative manner. You can also search Bike Rent In Jaipur Near Me and find Jojo travels online at your nearby location. `
+        },
+        {
+            id: 4,
+            title: `JOJO Travels Offers Premium Range of Bike Rent in Jaipur Sindhi Camp`,
+            description: `If you are traveling to Jaipur for visit by bus and looking for Bike rent in Jaipur Sindhi camp. Then choose Jojo travel for Bike Rental in Jaipur. Here we offer with best and most affordable premium rent for a bike in Jaipur to make your trip easy. Our bikes are always in excellent condition and sanitized to provide a smooth and memorable riding experience for a rider. We offer the best premium range of bikes on rent in Jaipur Sindhi Camp. We have various options of bikes with different premium ranges to satisfy the customer. If anyone travels to Jaipur by bus from a different city, they can easily book their bike online before reaching, so our executive will deliver the bike on rent in Jaipur Sindhi Camp.
+
+But If you have no time to pre-book your ride with us then don't worry you can search for bike rent in Jaipur near me and hire Jojo travels for rent bikes in Jaipur. We provide convenient or comfortable Bikes at your desired location to travel at affordable or reasonable prices. `
+        },
+        {
+            id: 5,
+            title: `How Can JOJO Travel Help in Choosing the Best Bike for Rent Near You?`,
+            description: `The main reason to choose Jojo Travel for Bike Rental in Jaipur is you can easily get the bike at your desired place. You can also book your bike online as per your choice. As we have different variety of bikes, the customer chooses their preferred bike at affordable prices. We provide the bikes in the best condition for customers' easy or fearless rides. If you are thinking to travel to Jaipur by bike then you arrive at the right place as we provide bike for rent in Jaipur by searching Bike Rent In Jaipur Near Me at affordable prices as per the customer's choice. `
+        },
+        {
+            id: 6,
+            title: `KTM on Rent in Jaipur to Roam Around Jaipur`,
+            description: `
+
+The best way to utilize your time and money at the time of traveling from one place to another in Jaipur is by choosing rental bike. You can comfortably travel through the streets of Pink city with so much fun and adventure. You will realize that you had understood the environment of the great city even more, better by taking a KTM bike for rent in Jaipur. JOJO Travel allows you to choose the best bike on rent to experience the immense pleasure that you are going to feel when you will rove in Pink city with the KTM bike.`
+        }
+    ]
+
+    const HeroData = {
+        videoUrl: '/assets/bike-bg.mp4',
+        title: 'Rent a Bike at Jojo Travels'
+    }
+
     return (
         <>
-            <Hero />
+            <Hero data={HeroData} />
+            <BikeSlider BikesData={BikesData} />
+            <RentalBike data={BikesOnRent} />
+            <SectionData data={sectionData} />
         </>
     )
 }

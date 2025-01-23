@@ -1,5 +1,6 @@
 "use client";
 import { useInView, motion } from "motion/react";
+import Link from "next/link";
 import { useRef } from "react";
 
 const RentalBike = ({ data }) => {
@@ -9,14 +10,14 @@ const RentalBike = ({ data }) => {
         <div className="max-w-6xl px-4">
           <div>
             <h1 className="text-7xl font-extrabold text-center text-primaryColor drop-shadow-[0_1.2px_1.2px_rgba(255,255,255,0.8)]">
-              Rental Bikes
+              {data.title}
             </h1>
             <p className="text-center mb-6 text-white text-2xl mt-3">
-              Best Offer Of The Day
+              {data?.subTitle}
             </p>
           </div>
           <div className="grid mt-6 grid-cols-1 max-w-full sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {data.map((bike, index) => {
+            {data?.Bikes.map((bike, index) => {
               const ref = useRef(null);
               const inView = useInView(ref, { once: true });
               return (
@@ -58,12 +59,18 @@ const RentalBike = ({ data }) => {
                       <p className="text-center text-sm">{bike.Passenger}</p>
                     </div>
                   </div>
-                  <motion.button
-                    whileHover={{ scale: 1.1, backgroundColor: "#ff7f50" }}
-                    className="mt-6 w-full px-5 py-3 bg-primaryColor text-white rounded-md shadow-md transform transition-transform duration-300 hover:bg-primaryColor-dark"
+                  <Link 
+                    href={`https://api.whatsapp.com/send?phone=919799994204&text=Hello%2C%20JOJO%20Travel!%20I%20want%20to%20rent%20${bike.title}`} 
+                    target="_blank" 
+                    className="w-full"
                   >
-                    Book Now
-                  </motion.button>
+                    <motion.button
+                      whileHover={{ scale: 1.1, backgroundColor: "#ff7f50" }}
+                      className="mt-6 w-full px-5 py-3 bg-primaryColor text-white rounded-md shadow-md transform transition-transform duration-300 hover:bg-primaryColor-dark"
+                    >
+                      Book Now
+                    </motion.button>
+                  </Link>
                 </motion.div>
               );
             })}

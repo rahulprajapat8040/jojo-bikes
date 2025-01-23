@@ -11,7 +11,7 @@ const HeroSection = ({ data }) => {
   return (
     <>
       <LazyMotion features={domAnimation}>
-      <section className="flex justify-center ">
+      <section className="flex justify-center bg-white">
         <div className="flex flex-col md:flex-row px-2 my-4 md:mt-24 py-20 relative items-center md:items-start justify-between w-full max-w-6xl">
           <motion.div
             ref={ref}

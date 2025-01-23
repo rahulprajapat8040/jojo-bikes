@@ -21,7 +21,7 @@ const Hero = ({ HeroData }) => {
 
     return (
         <>
-            <section className="flex justify-center">
+            <section className="flex justify-center bg-white">
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}

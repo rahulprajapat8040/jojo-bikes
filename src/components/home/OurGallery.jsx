@@ -1,13 +1,14 @@
 'use client'
 import { motion, useInView } from 'motion/react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useRef } from 'react'
 const OurGallery = ({ data }) => {
     const ref1 = useRef(null)
     const isView = useInView(ref1, { once: true })
     return (
         <>
-            <section className="py-8"
+            <section className="py-8 bg-white"
                 ref={ref1}
             >
                 <motion.div
@@ -18,7 +19,7 @@ const OurGallery = ({ data }) => {
 
                 >
                     <div>
-                        <h1 className='text-xl sm:text-2xl md:text-5xl text-center font-bold drop-shadow-2xl'> Some Of <span className='text-primaryColor drop-shadow-lg'>Our vehicles</span> </h1>
+                        <h1 className='text-xl sm:text-2xl text-black md:text-5xl text-center font-bold drop-shadow-2xl'> Some Of <span className='text-primaryColor drop-shadow-lg'>Our vehicles</span> </h1>
                     </div>
                     <div className='mt-4'>
                         <motion.div
@@ -68,11 +69,14 @@ const OurGallery = ({ data }) => {
                                                 whileHover={{ scale: 1.1 }}
                                                 transition={{ type: "spring", stiffness: 100, damping: 10 }}
                                             >
-                                                <motion.button
-                                                    className='text-sm sm:text-base lg:text-lg text-white translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 bg-primaryColor px-2 sm:px-3 lg:px-4 py-1 sm:py-1.5 lg:py-2 rounded-md pointer-events-auto'
-                                                >
-                                                    Book Now
-                                                </motion.button>
+                                                <Link href={`https://api.whatsapp.com/send?phone=919799994204&text=Hello%2C%20JOJO%20Travel!%20I%20want%20to%20rent%20${gallery.name}`}
+                                                    target="_blank" >
+                                                    <motion.button
+                                                        className='text-sm sm:text-base lg:text-lg text-white translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 bg-primaryColor px-2 sm:px-3 lg:px-4 py-1 sm:py-1.5 lg:py-2 rounded-md pointer-events-auto'
+                                                    >
+                                                        Book Now
+                                                    </motion.button>
+                                                </Link>
                                             </motion.div>
                                         </div>
                                     </motion.div>

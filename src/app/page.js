@@ -4,7 +4,10 @@ import OurGallery from "@/components/home/OurGallery";
 import Testimonial from "@/components/home/Testimonial";
 import WhyJojoBike from "@/components/home/WhyJojoBike";
 import { MdOutlineSupportAgent } from "react-icons/md";
-
+import { GiProgression } from "react-icons/gi";
+import { VscWorkspaceTrusted } from "react-icons/vsc";
+import { CiBookmarkCheck, CiViewBoard } from "react-icons/ci";
+import { GiTakeMyMoney } from "react-icons/gi";
 const HeroData = {
   heading1: "Enjoy your ride!",
   heading2: "Self Ride Bike Rental",
@@ -22,36 +25,44 @@ const WhyJojo = [
   },
   {
     id: "2",
+    icons: <GiProgression size={40} />,
     title: "Wide Range of collection",
     description: "Pick a bike or scooty that suits your needs, we have verity.",
   },
   {
     id: "3",
+    icons: <VscWorkspaceTrusted size={40} />,
     title: "Trusted & Transparent process",
     description:
       "You can trust us as we are upfront about the entire process renting.",
   },
   {
     id: "4",
+    icons: <CiBookmarkCheck size={40} />,
     title: "Hassle Free Booking",
     description:
       "Out step of booking a rental bike & scooty are very easy and quick.",
   },
   {
     id: "5",
+    icons: <CiViewBoard size={40} />,
     title: "Top Notch conditions",
     description:
       "We are well known for delivering well maintained bike & sccoty",
   },
   {
     id: "6",
+    icons: <GiTakeMyMoney size={40} />,
     title: "Reasonable Price",
     description:
       "Our rental prices are very reasonable and pocket friendly you can book in one go.0",
   },
 ];
 
-const RentalBikes = [
+const RentalBikes = {
+  title: 'Rental Bikes',
+  subTitle: 'Best Offer of The Day',
+  Bikes : [
   {
     id: "1",
     title: "Activa",
@@ -68,7 +79,15 @@ const RentalBikes = [
     Passenger: "2",
     image: "/assets/ktm-duke-best-offer.jpg",
   },
-];
+  {
+    id: "3",
+    title: "Honda Activa 4G",
+    transmission: "Automatic",
+    Fuel: "Petrol",
+    Passenger: "2",
+    image: "/assets/rent-in-jaipur-Activa.jpg",
+},
+]};
 
 const OurTestiMonials = [
   {
