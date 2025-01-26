@@ -4,6 +4,37 @@ import Hero from "@/components/bike-rent/Hero"
 import RentalBike from "@/components/common/RentalBike"
 import SectionData from "@/components/common/SectionData"
 
+export const metadata = {
+  title: 'Scooty & Activa on Rent in Jaipur | Best Rates - JOJO Travel',
+  description: 'Rent Activa, Scooty & automatic two-wheelers in Jaipur. Affordable daily & monthly rental plans with doorstep delivery. Book Honda Activa & scooters at best rates.',
+  keywords: 'scooty on rent in jaipur, activa on rent in jaipur, honda activa rental jaipur, scooty rental jaipur, automatic scooter rent jaipur, monthly scooty rental jaipur, activa 6g on rent, activa 125 rental',
+  openGraph: {
+    title: 'Scooty & Activa Rentals in Jaipur | JOJO Travel',
+    description: 'Rent Honda Activa & Scooters in Jaipur. Best maintained vehicles, flexible rental plans, and hassle-free booking process.',
+    type: 'website',
+    url: 'https://jojobikes.com/scooter-rent-jaipur',
+    images: [
+      {
+        url: '/assets/scooty-rent-og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Scooty and Activa Rentals in Jaipur'
+      }
+    ],
+    locale: 'en_IN',
+    siteName: 'JOJO Travel'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Rent Scooty & Activa in Jaipur | JOJO Travel',
+    description: 'Best rates for Activa & Scooty rentals in Jaipur. Daily & monthly plans available with doorstep delivery.',
+    images: ['/assets/scooty-rent-og-image.jpg']
+  },
+  alternates: {
+    canonical: 'https://jojobikes.com/scooter-rent-jaipur'
+  }
+}
+
 const BikeRentInJaipur = () => {
 
     const BikesData = [
@@ -86,53 +117,58 @@ Jojo Travel provides the best offer of Royal Enfield on rent in Jaipur. We offer
         Bikes: [
             {
                 id: "1",
+                type: "honda",
                 title: "Honda Activa 6G",
                 transmission: "Automatic",
                 Fuel: "Petrol",
                 Passenger: "2",
-                image: "/assets/activa-rent-in-jaipur.jpg",
+                image: "/assets/activa-rent-in-jaipur.png",
             },
             {
                 id: "2",
-                title: "Honda Activa 125 ",
+                type: "honda",
+                title: "Honda Activa 125",
                 transmission: "Automatic",
                 Fuel: "Petrol",
                 Passenger: "2",
-                image: "/assets/affordable-activa-on-rent-in-jaipur.jpg",
+                image: "/assets/affordable-activa-on-rent-in-jaipur.png",
             },
             {
                 id: "3",
+                type: "honda",
                 title: "Honda Activa 4G",
                 transmission: "Automatic",
                 Fuel: "Petrol",
                 Passenger: "2",
-                image: "/assets/rent-in-jaipur-Activa.jpg",
+                image: "/assets/rent-in-jaipur-Activa.png",
             },
             {
                 id: "4",
+                type: "suzuki",
                 title: "Suzuki Access 125",
                 transmission: "Automatic",
                 Fuel: "Petrol",
                 Passenger: "2",
-                image: "/assets/scooty-rent-in-jaipur.jpg",
+                image: "/assets/scooty-rent-in-jaipur.png",
             },
             {
                 id: "5",
+                type: "honda",
                 title: "Honda Activa 3g",
                 transmission: "Automatic",
                 Fuel: "Petrol",
                 Passenger: "2",
-                image: "/assets/affordable-scooty-on-rent-in-jaipur.jpg",
+                image: "/assets/affordable-scooty-on-rent-in-jaipur.png",
             },
             {
                 id: "6",
+                type: "honda",
                 title: "Honda Grazia 125",
                 transmission: "Automatic",
                 Fuel: "Petrol",
                 Passenger: "2",
-                image: "/assets/rent-in-jaipur-scooty.jpg",
+                image: "/assets/rent-in-jaipur-scooty.png",
             },
-
         ]
     }
 
@@ -213,7 +249,7 @@ Travel around Jaipur hassle-free by renting an activa and enjoy the essence of r
             features: ['Well-maintained vehicles', 'Timely service', 'Customer-focused approach']
         }
     ]
-
+    const title= "Our Pricing Includes"
 
     return (
         <>
@@ -221,7 +257,7 @@ Travel around Jaipur hassle-free by renting an activa and enjoy the essence of r
             <BikeSlider BikesData={BikesData} />
             <RentalBike data={BikesOnRent} />
             <SectionData data={sectionData} />
-            <WhyJojoBikes WhyJojoBikesData={whyJojoBikes} />
+            <WhyJojoBikes WhyJojoBikesData={whyJojoBikes} title={title} />
         </>
     )
 }

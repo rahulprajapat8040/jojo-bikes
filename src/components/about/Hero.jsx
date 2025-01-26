@@ -21,7 +21,7 @@ const Hero = ({ HeroData }) => {
 
     return (
         <>
-            <section className="flex justify-center bg-white">
+            <section className="flex overflow-x-hidden justify-center bg-white">
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -53,7 +53,7 @@ const Hero = ({ HeroData }) => {
                                 transition={{ duration: 0.3, delay: 0.3 }}
                                 ref={ref1}
                                 whileHover={{ scale: 1.02 }}
-                                className="bg-gradient-to-br from-sky-600 to-blue-800 md:p-6 rounded-lg shadow-sm">
+                                className="bg-gradient-to-br p-2 from-sky-600 to-blue-800 md:p-6 rounded-lg shadow-sm">
                                 <p className="text-white">{HeroData.para1}</p>
                             </motion.div>
                             <motion.div
@@ -62,7 +62,7 @@ const Hero = ({ HeroData }) => {
                                 transition={{ duration: 0.2, delay: 0.5 }}
                                 ref={ref2}
                                 whileHover={{ scale: 0.9 }}
-                                className="bg-gradient-to-br from-sky-600 to-blue-800 md:p-6 rounded-lg shadow-sm">
+                                className="bg-gradient-to-br p-2 from-sky-600 to-blue-800 md:p-6 rounded-lg shadow-sm">
                                 <p className="text-white">{HeroData.para2}</p>
                             </motion.div>
                         </div>
@@ -89,20 +89,20 @@ const Hero = ({ HeroData }) => {
                                 transition={{ duration: 0.1, delay: 0.7 }}
                                 ref={ref4}
                                 whileHover={{ scaleX: 1.02 }}
-                                className="bg-gradient-to-br from-sky-600 to-blue-800 md:p-6 rounded-lg shadow-sm">
+                                className="bg-gradient-to-br p-2 from-sky-600 to-blue-800 md:p-6 rounded-lg shadow-sm">
                                 <p className="text-white">{HeroData.para3}</p>
                             </motion.div>
                         </div>
                     </div>
                 </motion.div>
             </section>
-            <section className='w-full py-12 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900'>
+            <section className='w-full py-12 bg-gradient-to-tr from-white via-gray-200 to-gray-100'>
                 <div className='max-w-6xl w-full mx-auto px-4'>
                     <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 border-b py-5'>
                         <motion.div
                             className='relative group p-6 rounded-xl overflow-hidden transition-all duration-300'
                             style={{
-                                background: 'linear-gradient(45deg, rgba(17, 24, 39, 0.9), rgba(31, 41, 55, 0.9))',
+                                background: '#fff',
                                 backdropFilter: 'blur(10px)',
                             }}
                             whileHover={{ scale: 1.02 }}
@@ -113,14 +113,13 @@ const Hero = ({ HeroData }) => {
                                 <div className='text-4xl font-bold bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-200 bg-clip-text text-transparent'>
                                     <Counter end={25000} duration={2500} />
                                 </div>
-                                <p className='text-white font-semibold text-lg text-center'>Happy Customers</p>
+                                <p className='text-black font-semibold text-lg text-center'>Happy Customers</p>
                             </div>
                         </motion.div>
 
                         <motion.div
-                            className='relative group p-6 rounded-xl overflow-hidden transition-all duration-300'
+                            className='relative bg-white group p-6 rounded-xl overflow-hidden transition-all duration-300'
                             style={{
-                                background: 'linear-gradient(45deg, rgba(17, 24, 39, 0.9), rgba(31, 41, 55, 0.9))',
                                 backdropFilter: 'blur(10px)',
                             }}
                             whileHover={{ scale: 1.02 }}
@@ -131,14 +130,13 @@ const Hero = ({ HeroData }) => {
                                 <div className='text-4xl font-bold bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-200 bg-clip-text text-transparent'>
                                     <Counter end={1000} duration={2500} />
                                 </div>
-                                <p className='text-white font-semibold text-lg text-center'>BIKES IN GARAGE</p>
+                                <p className='text-black font-semibold text-lg text-center'>BIKES IN GARAGE</p>
                             </div>
                         </motion.div>
 
                         <motion.div
-                            className='relative group p-6 rounded-xl overflow-hidden transition-all duration-300'
+                            className='relative group bg-white p-6 rounded-xl overflow-hidden transition-all duration-300'
                             style={{
-                                background: 'linear-gradient(45deg, rgba(17, 24, 39, 0.9), rgba(31, 41, 55, 0.9))',
                                 backdropFilter: 'blur(10px)',
                             }}
                             whileHover={{ scale: 1.02 }}
@@ -149,14 +147,13 @@ const Hero = ({ HeroData }) => {
                                 <div className='text-4xl font-bold bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-200 bg-clip-text text-transparent'>
                                     <Counter end={100000} duration={2500} />
                                 </div>
-                                <p className='text-white font-semibold text-lg text-center'>TOTAL KILOMETER/MIL</p>
+                                <p className='text-black font-semibold text-lg text-center'>TOTAL KILOMETER/MIL</p>
                             </div>
                         </motion.div>
 
                         <motion.div
-                            className='relative group p-6 rounded-xl overflow-hidden transition-all duration-300'
+                            className='relative bg-white group p-6 rounded-xl overflow-hidden transition-all duration-300'
                             style={{
-                                background: 'linear-gradient(45deg, rgba(17, 24, 39, 0.9), rgba(31, 41, 55, 0.9))',
                                 backdropFilter: 'blur(10px)',
                             }}
                             whileHover={{ scale: 1.02 }}
@@ -167,7 +164,7 @@ const Hero = ({ HeroData }) => {
                                 <div className='text-4xl font-bold bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-200 bg-clip-text text-transparent'>
                                     <Counter end={50} duration={2500} />
                                 </div>
-                                <p className='text-white font-semibold text-lg text-center'>BIKES CENTER SOLUTIONS</p>
+                                <p className='text-black font-semibold text-lg text-center'>BIKES CENTER SOLUTIONS</p>
                             </div>
                         </motion.div>
                     </div>

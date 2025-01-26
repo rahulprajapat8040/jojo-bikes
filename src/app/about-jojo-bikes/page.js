@@ -2,9 +2,34 @@ import Hero from "@/components/about/Hero"
 import WhyJojoBikes from "@/components/about/WhyJojoBikes"
 
 export const metadata = {
-    title: 'About JOJO Bikes | Best Bike Rental Service in Jaipur',
-    description: 'Learn about JOJO Bikes - Jaipur\'s premier bike and Activa rental service. Discover our commitment to affordable, hassle-free transportation solutions.',
-    keywords: 'bike rental Jaipur, Activa on rent, scooty rental, two-wheeler rental service'
+  title: 'About JOJO Bikes | Premier Bike Rental Service in Jaipur',
+  description: 'Discover JOJO Bikes - Jaipur\'s trusted two-wheeler rental service. We offer Activa, bikes & scooties with 24/7 support, doorstep delivery & affordable rates. Experience hassle-free bike rentals in Jaipur.',
+  keywords: 'bike rental Jaipur, Activa on rent Jaipur, scooty rental Jaipur, two-wheeler rental service, bike hire Jaipur, monthly bike rental Jaipur, affordable bike rental, JOJO Bikes about, best bike rental service Jaipur',
+  openGraph: {
+    title: 'About JOJO Bikes - Leading Bike Rental Service in Jaipur',
+    description: 'Learn about JOJO Bikes - your trusted partner for bike rentals in Jaipur. Offering premium fleet selection, doorstep delivery, and hassle-free booking with transparent pricing.',
+    type: 'website',
+    url: 'https://jojobikes.com/about-jojo-bikes',
+    images: [
+      {
+        url: '/assets/about-us-side-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'JOJO Bikes - About Us'
+      }
+    ],
+    locale: 'en_IN',
+    siteName: 'JOJO Bikes'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About JOJO Bikes - Jaipur\'s Premium Bike Rental Service',
+    description: 'Premium fleet, doorstep delivery & transparent pricing. Experience the best bike rental service in Jaipur with JOJO Bikes.',
+    images: ['/assets/about-us-side-image.jpg'],
+  },
+  alternates: {
+    canonical: 'https://jojobikes.com/about-jojo-bikes'
+  }
 }
 
 const AboutJojoBikes = () => {
@@ -54,6 +79,8 @@ const AboutJojoBikes = () => {
             features: ['Pick up and Drop service', 'Home Delivery', 'Flexible timing']
         }
     ]
+
+ 
 
     return (
         <>

@@ -14,6 +14,7 @@ export default {
         secondoryColor: '#000',
         paraGraph: "#333333"
       },
+      
     },
   },
   plugins: [],

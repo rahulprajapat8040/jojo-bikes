@@ -1,92 +1,65 @@
 'use client'
-import { motion, useInView } from 'motion/react'
-import Image from 'next/image'
-import Link from 'next/link'
+import { motion, useInView, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
-const OurGallery = ({ data }) => {
-    const ref1 = useRef(null)
-    const isView = useInView(ref1, { once: true })
-    return (
-        <>
-            <section className="py-8 bg-white"
-                ref={ref1}
-            >
-                <motion.div
-                    initial={{ y: -30, opacity: 0 }}
-                    animate={isView ? { y: 0, opacity: 1 } : {}}
-                    transition={{ duration: 0.6 }}
-                    className="max-w-6xl px-4 mx-auto"
 
+const OurGallery = ({ data }) => {
+    const containerRef = useRef(null)
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start end", "end start"]
+    })
+
+    const opacity = useTransform(scrollYProgress, [0, 0.2], [0, 1])
+
+    return (
+        <section className="py-20 mt-8 bg-white">
+            <div className="max-w-7xl mx-auto px-4">
+                {/* Header */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="text-center mb-16"
                 >
-                    <div>
-                        <h1 className='text-xl sm:text-2xl text-black md:text-5xl text-center font-bold drop-shadow-2xl'> Some Of <span className='text-primaryColor drop-shadow-lg'>Our vehicles</span> </h1>
-                    </div>
-                    <div className='mt-4'>
-                        <motion.div
-                            className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-4 gap-4 sm:gap-6 lg:gap-10'
-                            initial="hidden"
-                            animate={isView ? "visible" : "hidden"}
-                            variants={{
-                                hidden: {},
-                                visible: {
-                                    transition: {
-                                        staggerChildren: 0.2
-                                    }
-                                }
-                            }}
-                        >
-                            {
-                                data.map((gallery) => (
-                                    <motion.div
-                                        key={gallery.id}
-                                        initial={{ opacity: 0, y: 20 }}
-                                        animate={isView ? { opacity: 1, y: 0 } : {}}
-                                        whileHover={{ borderRadius: 20 }}
-                                        className='relative overflow-hidden group cursor-pointer'
-                                        variants={{
-                                            hidden: { opacity: 0, y: 20 },
-                                            visible: { opacity: 1, y: 0 }
-                                        }}
-                                    >
-                                        <div className="overflow-hidden relative z-10">
-                                            <motion.img
-                                                whileHover={{ scale: 1.09, borderRadius: 10 }}
-                                                transition={{ duration: 0.3, ease: "easeOut" }}
-                                                src={gallery.image}
-                                                alt={gallery.name}
-                                                className='w-full h-[200px] sm:h-[250px] lg:h-[300px] object-cover'
-                                            />
-                                        </div>
-                                        <div
-                                            className='absolute inset-0 z-20 bg-black/0 group-hover:bg-black/70 transition-all duration-300 flex justify-center items-center pointer-events-none flex-col gap-1'
-                                        >
-                                            <h3
-                                                className='text-sm sm:text-base lg:text-lg font-bold text-primaryColor translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 text-center px-2'
-                                            >
-                                                {gallery.name}
-                                            </h3>
-                                            <motion.div
-                                                whileHover={{ scale: 1.1 }}
-                                                transition={{ type: "spring", stiffness: 100, damping: 10 }}
-                                            >
-                                                <Link href={`https://api.whatsapp.com/send?phone=919799994204&text=Hello%2C%20JOJO%20Travel!%20I%20want%20to%20rent%20${gallery.name}`}
-                                                    target="_blank" >
-                                                    <motion.button
-                                                        className='text-sm sm:text-base lg:text-lg text-white translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 bg-primaryColor px-2 sm:px-3 lg:px-4 py-1 sm:py-1.5 lg:py-2 rounded-md pointer-events-auto'
-                                                    >
-                                                        Book Now
-                                                    </motion.button>
-                                                </Link>
-                                            </motion.div>
-                                        </div>
-                                    </motion.div>
-                                ))
-                            }
-                        </motion.div>
-                    </div>
+                    <h1 className="text-5xl md:text-7xl font-bold text-primaryColor mb-4">
+                        Our Gallery
+                    </h1>
+                    <p className="text-gray-600 text-lg">
+                        Discover our premium collection
+                    </p>
                 </motion.div>
-            </section>
-        </>
+
+                {/* Gallery Grid */}
+                <motion.div
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5  gap-8"
+                    style={{ opacity }}
+                >
+                    {data.map((item, index) => (
+                        <motion.div
+                            key={item.id}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: index * 0.1 }}
+                            className="relative group cursor-pointer"
+                        >
+                            <div className="aspect-[4/5] overflow-hidden rounded-xl">
+                                <img
+                                    src={item.image}
+                                    alt={item.name}
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                />
+                                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                        <h3 className="text-xl font-semibold">
+                                            {item.name}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    ))}
+                </motion.div>
+            </div>
+        </section>
     )
 }
 

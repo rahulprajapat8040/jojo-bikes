@@ -1,7 +1,39 @@
 import BikeSlider from "@/components/bike-rent/BikeSlider"
 import Hero from "@/components/bike-rent/Hero"
+import FaqsData from "@/components/common/Faqs"
 import RentalBike from "@/components/common/RentalBike"
 import SectionData from "@/components/common/SectionData"
+
+export const metadata = {
+    title: 'Bike Rent in Jaipur | Royal Enfield, KTM & Premium Bikes - JOJO Travel',
+    description: 'Rent premium bikes in Jaipur including Royal Enfield, KTM Duke, Bullet, and Harley Davidson. 24/7 support, doorstep delivery, and competitive prices for motorcycle rentals.',
+    keywords: 'bike rent in jaipur, royal enfield on rent in jaipur, bullet on rent in jaipur, ktm bike on rent in jaipur, harley davidson on rent in jaipur, bike rental jaipur, motorcycle rental jaipur, bike hire jaipur, rent bike jaipur',
+    openGraph: {
+        title: 'Premium Bike Rentals in Jaipur | JOJO Travel',
+        description: 'Choose from Royal Enfield, KTM, Bullet & Harley Davidson bikes for rent in Jaipur. Best rates, well-maintained bikes, and hassle-free booking.',
+        type: 'website',
+        url: 'https://jojobikes.com/bike-rent-in-jaipur',
+        images: [
+            {
+                url: '/assets/bike-rent-og-image.jpg',
+                width: 1200,
+                height: 630,
+                alt: 'Premium Bikes for Rent in Jaipur'
+            }
+        ],
+        locale: 'en_IN',
+        siteName: 'JOJO Travel'
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Rent Premium Bikes in Jaipur | JOJO Travel',
+        description: 'Royal Enfield, KTM, Bullet & Harley Davidson bikes available for rent in Jaipur. Easy booking, 24/7 support.',
+        images: ['/assets/bike-rent-og-image.jpg']
+    },
+    alternates: {
+        canonical: 'https://jojobikes.com/bike-rent-in-jaipur'
+    }
+}
 
 const BikeRentInJaipur = () => {
 
@@ -85,91 +117,105 @@ Jojo Travel provides the best offer of Royal Enfield on rent in Jaipur. We offer
         Bikes: [
             {
                 id: "1",
+                type: "bullet",
                 title: "Royal Enfield 350",
-                transmission: "Automatic",
+                transmission: "Manual",
                 Fuel: "Petrol",
-                Passenger: "1",
-                image: "/assets/bike-on-rent-in-jaipur.jpg",
+                Passenger: "2",
+                image: "/assets/bike-on-rent-in-jaipur.png",
             },
             {
                 id: "2",
-                title: "KTM Duke ",
-                transmission: "Automatic",
+                type: "ktm",
+                title: "KTM Duke",
+                transmission: "Manual",
                 Fuel: "Petrol",
                 Passenger: "2",
-                image: "/assets/ktm-duke-best-offer.jpg",
+                image: "/assets/ktm-duke-best-offer.png",
             },
             {
                 id: "3",
-                title: "Yamaha R15 ",
-                transmission: "Automatic",
+                type: "sports",
+                title: "Yamaha R15",
+                transmission: "Manual",
                 Fuel: "Petrol",
                 Passenger: "2",
-                image: "/assets/bike-rent-in-jaipur-near-me.jpg",
+                image: "/assets/bike-rent-in-jaipur-near-me.png",
             },
             {
                 id: "4",
+                type: "ktm",
                 title: "KTM 390 Duke",
-                transmission: "Automatic",
+                transmission: "Manual",
                 Fuel: "Petrol",
                 Passenger: "2",
-                image: "/assets/hire-ktm-bike-on-rent-in-jaipur.jpg",
+                image: "/assets/hire-ktm-bike-on-rent-in-jaipur.png",
             },
             {
                 id: "5",
+                type: "ktm",
                 title: "KTM RC 200",
-                transmission: "Automatic",
+                transmission: "Manual",
                 Fuel: "Petrol",
                 Passenger: "2",
-                image: "/assets/affordable-ktm-bike-on-rent-in-jaipur.jpg",
+                image: "/assets/affordable-ktm-bike-on-rent-in-jaipur.png",
             },
             {
                 id: "6",
+                type: "ktm",
                 title: "KTM 125 Duke",
-                transmission: "Automatic",
+                transmission: "Manual",
                 Fuel: "Petrol",
                 Passenger: "2",
                 image: "/assets/rent-in-jaipur-ktm-bike.png",
             },
             {
                 id: "7",
+                type: "harley",
                 title: "Harley Davidson Fat Bob",
-                transmission: "Automatic",
+                transmission: "Manual",
                 Fuel: "Petrol",
                 Passenger: "2",
-                image: "/assets/hire-harley-davidson-bike-on-rent-in-jaipur.jpg",
+                image: "/assets/hire-harley-davidson-bike-on-rent-in-jaipur.png",
             },
             {
                 id: "8",
                 title: "Harley Davidson Street Bob",
+                type: "harley",
+
                 transmission: "Automatic",
                 Fuel: "Petrol",
                 Passenger: "2",
-                image: "/assets/affordable-harley-davidson-bike-on-rent-in-jaipur.jpg",
+                image: "/assets/affordable-harley-davidson-bike-on-rent-in-jaipur.png",
             },
             {
                 id: "9",
                 title: "Harley Davidson PAN",
+                type: "harley",
+
                 transmission: "Automatic",
                 Fuel: "Petrol",
                 Passenger: "2",
-                image: "/assets/bike-on-rent-in-jaipur-harley-davidson.jpg",
+                image: "/assets/bike-on-rent-in-jaipur-harley-davidson.png",
             },
             {
                 id: "10",
                 title: "Yamaha FZ-Fi ",
                 transmission: "Automatic",
+                type: "sports",
+
                 Fuel: "Petrol",
                 Passenger: "2",
-                image: "/assets/affordable-two-wheeler-on-rent-in-jaipur.jpg",
+                image: "/assets/affordable-two-wheeler-on-rent-in-jaipur.png",
             },
             {
                 id: "11",
                 title: "Honda Hornet 2.0",
                 transmission: "Automatic",
+                type: "sports",
                 Fuel: "Petrol",
                 Passenger: "2",
-                image: "/assets/hire-two-wheeler-on-rent-in-jaipur.jpg",
+                image: "/assets/hire-two-wheeler-on-rent-in-jaipur.png",
             },
             {
                 id: "12",
@@ -177,31 +223,36 @@ Jojo Travel provides the best offer of Royal Enfield on rent in Jaipur. We offer
                 transmission: "Automatic",
                 Fuel: "Petrol",
                 Passenger: "2",
-                image: "/assets/2-wheeler-on-rent-in-jaipur.jpg",
+                image: "/assets/2-wheeler-on-rent-in-jaipur.png",
             },
             {
                 id: "13",
                 title: "Bullet Classic x 350",
+                type: "bullet",
                 transmission: "Automatic",
                 Fuel: "Petrol",
                 Passenger: "2",
-                image: "/assets/hire-bullet-on-rent-in-jaipur.jpg",
+                image: "/assets/hire-bullet-on-rent-in-jaipur.png",
             },
             {
                 id: "14",
                 title: "Royal Enfield Classic BS6",
                 transmission: "Automatic",
+                type: "bullet",
+
                 Fuel: "Petrol",
                 Passenger: "1",
-                image: "/assets/affordable-bullet-on-rent-in-jaipur.jpg",
+                image: "/assets/affordable-bullet-on-rent-in-jaipur.png",
             },
             {
                 id: "15",
                 title: "Royal Enfield Classic 350",
                 transmission: "Automatic",
+                type: "bullet",
+
                 Fuel: "Petrol",
                 Passenger: "2",
-                image: "/assets/rent-in-Jaipur-bullet.jpg",
+                image: "/assets/rent-in-Jaipur-bullet.png",
             },
 
 
@@ -251,11 +302,61 @@ The best way to utilize your time and money at the time of traveling from one pl
         title: 'Rent a Bike at Jojo Travels'
     }
 
+    const Faqs = [
+        {
+            qustion: 'Where can i pickup the Bike?',
+            answer: 'You have the option to select a pickup location as bike rent in Jaipur near me. You can choose a location when you book your bike.'
+        },
+        {
+            qustion: 'What are the charges for damange to the Bike ?',
+            answer: `
+
+
+i) In the facts of damage to the rented two-wheeler due to accident/abuse/negligence, the provider will charge the corresponding fees and the driver is obliged to pay these to the provider together with the daily rate until the bike is ready for use rent again.
+
+ii) As per Co's policy, we will not claim damages below Rs. 5000/- from insurance. Therefore, the total amount up to Rs. 5000 plus the daily charge shall be borne by the customer until the bike is ready for rent again.
+
+iii) In the facts of major damage, the rider is responsible for paying the repair amount in full plus the 7-day bike fee, including any incidental expenses. After the insurance claim has been settled, the amount of the claim will be credited to the customer's account.
+
+iv) In the fact of a total loss, the driver is obliged to pay in full the amount of the new two-wheeler plus the costs for registration and insurance as well as the 7-day fee for the bike including ancillary costs after the insurance claim has been processed, the amount of the claim will be credited to the customer account.
+
+v) In the facts of theft, the cyclist is immediately obliged to pay the full value of the new two-wheeler plus registration and insurance costs plus 7 days bike fee, including any unforeseen costs. After the insurance claim has been settled, the amount of the claim will be credited to the customer's account.
+
+            `
+        },
+        {
+            qustion: 'What is the speed limit policy for the rented bike of jojo travels ?',
+            answer: 'Vehicle speeds are remotely tracked and monitored via GPS devices to ensure the safety of all JOJO bike riders. Any violation of the speed limit will incur a fine of Rs. 100 per warning (speed limits are 100-149 cc bikes- 70 km/h). ',
+
+        },
+        {
+            qustion : 'How do i pay for my rental bike in jaipur at Jojo Travels ?',
+            answer: 'You can pay online using credit/debit cards, e-wallets, cash, or any other payment method. '
+        },
+        {
+            qustion : 'What accessories of Inclusions will get when hiring Jojo travels for bike rent?',
+            answer : 'You will get the best service bike with maintenance and a complementary helmet with your rental bike.'
+        },
+        {
+            qustion : 'will Jojo Travels deliver bike rent in jaipur Sindhi Camp ?',
+            answer: 'Yes, if you traveling from some other place by bus and you looking to rent a bike, then we provide service of bike delivery at Sindhi camp.'
+        },
+        {
+            qustion : 'How Much does it cost to Bike on rent at Jojo Travels ?',
+            answer: 'Jojo travels provides affordable Rent For Bike In Jaipur to the customer with many offers and discounts.'
+        },
+        {
+            qustion: 'Is it possible to ride the Bike OutStation ?',
+            answer : 'Yes, it is possible to take a bike ride outstation. '
+        }
+    ]
+
     return (
         <>
             <Hero data={HeroData} />
             <BikeSlider BikesData={BikesData} />
             <RentalBike data={BikesOnRent} />
+            <FaqsData faqData={Faqs} />
             <SectionData data={sectionData} />
         </>
     )

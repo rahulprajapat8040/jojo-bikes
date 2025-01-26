@@ -5,6 +5,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-rgb: 239, 68, 68; /* Adjust these values to match your primary color */
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,9 +26,58 @@ body {
 }
 
 @keyframes anime {
- 0%{
-  transform: rotate(0deg);
- }100%{
-  transform: rotate(360deg);
- }
+  0%{
+    transform: rotate(0deg);
+  }100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-10%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add if you want to remove the scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: none;
+}
+
+.feature-card:hover {
+  transform: rotateX(10deg) rotateY(10deg);
+  box-shadow: 
+    -5px 5px 20px rgba(0,0,0,0.3),
+    0 0 20px rgba(255,255,255,0.1);
 }

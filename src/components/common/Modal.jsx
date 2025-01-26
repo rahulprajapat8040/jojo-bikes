@@ -6,9 +6,9 @@ const Modal = ({ isOpen, onClose, title, description }) => {
     return (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
             <motion.div
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: Math.random()*100 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 50 }}
+                exit={{ opacity: 0, y: Math.random()*100 }}
                 className="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto animate-modal-enter">
                 <div className="sticky top-0 bg-gradient-to-r from-red-500 to-yellow-600  p-6 rounded-t-xl">
                     <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">{title}</h2>

@@ -1,4 +1,34 @@
-'use client'
+
+export const metadata = {
+    title: 'Terms & Conditions - Jojo Travel Bike Rental Jaipur',
+    description: 'Read our comprehensive terms and conditions for bike and scooty rentals in Jaipur. Includes rental policies, documentation requirements, and accident terms for two-wheeler rentals.',
+    keywords: 'bike rental terms jaipur, scooty rental conditions, jojo travel policies, bike hire terms and conditions jaipur, two wheeler rental agreement',
+    openGraph: {
+        title: 'Terms & Conditions | Jojo Travel Bike Rental',
+        description: 'Important terms and conditions for renting bikes and scooties from Jojo Travel in Jaipur. Learn about our policies, documentation requirements, and rental guidelines.',
+        type: 'website',
+        url: 'https://jojobikes.com/term-condition',
+        images: [
+            {
+                url: '/assets/jojo-bike-og-image.jpg',
+                width: 1200,
+                height: 630,
+                alt: 'Jojo Bikes Terms and Conditions'
+            }
+        ],
+        locale: 'en_IN',
+        siteName: 'Jojo Travel'
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Terms & Conditions - Jojo Travel Bike Rental',
+        description: 'Read our rental terms and policies for bike and scooty rentals in Jaipur.',
+        images: ['/assets/jojo-bike-og-image.jpg'],
+    },
+    alternates: {
+        canonical: 'https://jojobikes.com/term-condition'
+    }
+}
 
 export default function TermsCondition() {
     const otherTerms = [

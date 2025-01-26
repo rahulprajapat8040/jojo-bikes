@@ -1,83 +1,164 @@
 "use client";
-import { useInView, motion } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { useRef } from "react";
+import Image from "next/image";
+import SlideInView from "./SlideInView";
+import { useState } from "react";
+import { FaStar } from "react-icons/fa";
+
 
 const RentalBike = ({ data }) => {
+  const [selectedType, setSelectedType] = useState("all");
+
+  // Get unique types from bikes and filter out undefined/null values
+  const bikeTypes = ["all", ...new Set(data.Bikes.map(bike => bike.type).filter(Boolean))];
+
+  // Filter bikes, handling cases where type might be undefined
+  const filteredBikes = selectedType === "all"
+    ? data.Bikes
+    : data.Bikes.filter(bike => bike.type && bike.type === selectedType);
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    },
+    hover: {
+      y: -10,
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut"
+      }
+    }
+  };
+
+  const buttonVariants = {
+    rest: { scale: 1 },
+    hover: {
+      scale: 1.05,
+      boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.2)",
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut"
+      }
+    }
+  };
+
+  const filterButtonVariants = {
+    initial: { scale: 0.95, opacity: 0 },
+    animate: { scale: 1, opacity: 1 },
+    tap: { scale: 0.95 },
+    hover: { scale: 1.05 }
+  };
+
+  const handleWhatsAppClick = (bikeName) => {
+    const message = `Hello Jojo Travel, I want to rent ${bikeName}`;
+    const phoneNumber = "8503027210";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
-    <>
-      <section className="flex justify-center py-8 bg-gray-900 ">
-        <div className="max-w-6xl px-4">
-          <div>
-            <h1 className="text-7xl font-extrabold text-center text-primaryColor drop-shadow-[0_1.2px_1.2px_rgba(255,255,255,0.8)]">
-              {data.title}
-            </h1>
-            <p className="text-center mb-6 text-white text-2xl mt-3">
-              {data?.subTitle}
+    <section className="flex justify-center bg-gradient-to-b from-white to-gray-50 overflow-hidden">
+      <div className="container px-4 py-20">
+        <SlideInView>
+          <h2 className="text-4xl font-bold text-center bg-gradient-to-r from-primaryColor to-yellow-700 bg-clip-text text-transparent">
+            {data.title}
+          </h2>
+          {data.subTitle && (
+            <p className="text-center text-xl mt-4 text-gray-600 max-w-2xl mx-auto">
+              {data.subTitle}
             </p>
-          </div>
-          <div className="grid mt-6 grid-cols-1 max-w-full sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {data?.Bikes.map((bike, index) => {
-              const ref = useRef(null);
-              const inView = useInView(ref, { once: true });
-              return (
-                <motion.div
-                  ref={ref}
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={inView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ scale: 1.05, rotate: 2 }}
-                  key={bike.id}
-                  className="flex flex-col border border-gray-300 items-center justify-center p-2 md:p-4 py-10 bg-white rounded-lg shadow-xl transform transition-transform duration-300 hover:shadow-2xl"
-                >
-                  <motion.img
-                    src={bike.image}
-                    alt={bike.title}
-                    className="max-w-full h-52 object-cover rounded-md"
-                    whileHover={{ scale: 1.01 }}
-                  />
-                  <h1 className="text-3xl py-3 text-center font-bold text-primaryColor">
-                    {bike.title}
-                  </h1>
-                  <div className="flex justify-around w-full text-gray-700">
-                    <div className="border-r border-gray-400 px-2 w-1/3">
-                      <p className="text-center text-sm font-semibold text-gray-900">
-                        Transmission
-                      </p>
-                      <p className="text-center text-sm">{bike.transmission}</p>
-                    </div>
-                    <div className="border-r border-gray-400 px-2 w-1/3">
-                      <p className="text-center text-sm font-semibold text-gray-900">
-                        Fuel
-                      </p>
-                      <p className="text-center text-sm">{bike.Fuel}</p>
-                    </div>
-                    <div className="px-2 w-1/3">
-                      <p className="text-center text-sm font-semibold text-gray-900">
-                        Passenger
-                      </p>
-                      <p className="text-center text-sm">{bike.Passenger}</p>
+          )}
+        </SlideInView>
+
+        {/* Only show filter if we have more than one type */}
+        {bikeTypes.length > 1 && (
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-wrap justify-center gap-4 mt-10"
+          >
+            {bikeTypes.map((type) => (
+              <motion.button
+                key={type}
+                variants={filterButtonVariants}
+                initial="initial"
+                animate="animate"
+                whileTap="tap"
+                whileHover="hover"
+                onClick={() => setSelectedType(type)}
+                className={`px-7 py-2 rounded-lg font-medium transition-all duration-300 ${selectedType === type
+                  ? 'bg-gradient-to-r from-primaryColor to-yellow-500 text-white shadow-lg'
+                  : 'bg-white text-gray-700 hover:shadow-md border'
+                  }`}
+              >
+                {type === "all" ? "All" : type.charAt(0).toUpperCase() + type.slice(1)}
+              </motion.button>
+            ))}
+          </motion.div>
+        )}
+
+        {/* Bikes Grid */}
+        <motion.div
+          layout
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto gap-8 mt-16"
+        >
+          <AnimatePresence mode="popLayout">
+            {filteredBikes.map((bike) => (
+              <motion.div
+                key={bike.id}
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.3 }}
+                variants={cardVariants}
+                whileHover="hover"
+                className="group relative pt-16" // Added pt-16 for image overflow
+              >
+
+                <div className="rounded-xl shadow-lg bg-transparent overflow-visible transform transition-all duration-300">
+                  <div className="relative -mt-24 mx-6"> {/* Changed to -mt-24 and added mx-6 */}
+                    <div className="relative h-56 transform transition-transform duration-300 group-hover:scale-110 bg-transparent">
+                      <Image
+                        src={bike.image}
+                        alt={bike.title}
+                        width={400}
+                        height={300}
+                        className="w-full h-full object-contain drop-shadow-2xl transform transition-all duration-300 hover:scale-105 mix-blend-multiply"
+                        style={{ backgroundColor: 'transparent' }}
+                      />
                     </div>
                   </div>
-                  <Link 
-                    href={`https://api.whatsapp.com/send?phone=919799994204&text=Hello%2C%20JOJO%20Travel!%20I%20want%20to%20rent%20${bike.title}`} 
-                    target="_blank" 
-                    className="w-full"
-                  >
+                  <div className="p-6 bg-white rounded-xl">
+                    <div className="flex gap-2 text-primaryColor py-2"><FaStar /><FaStar /><FaStar /><FaStar /></div>
+                    <h3 className="text-xl font-semibold text-gray-800">{bike.title}</h3>
+                    <h3 className="font-semibold pt-2 text-blue-500">{bike?.price || "500"} / Day</h3>
                     <motion.button
-                      whileHover={{ scale: 1.1, backgroundColor: "#ff7f50" }}
-                      className="mt-6 w-full px-5 py-3 bg-primaryColor text-white rounded-md shadow-md transform transition-transform duration-300 hover:bg-primaryColor-dark"
+                      variants={buttonVariants}
+                      initial="rest"
+                      whileHover="hover"
+                      onClick={() => handleWhatsAppClick(bike.title)}
+                      className="mt-6 w-full bg-gradient-to-r from-primaryColor to-yellow-400 text-white py-3 px-6 rounded-lg font-semibold 
+                      transform transition-all duration-300 hover:from-yellow-600 hover:to-yellow-700"
                     >
                       Book Now
                     </motion.button>
-                  </Link>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-    </>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
+      </div>
+    </section>
   );
 };
 
