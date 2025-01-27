@@ -63,6 +63,10 @@ const RentalBike = ({ data }) => {
     window.open(whatsappUrl, '_blank');
   };
 
+  const handleBookNowClick = () => {
+    window.open('https://order.jojobikerental.in/', '_blank');
+  };
+
   return (
     <section className="flex justify-center bg-gradient-to-b from-white to-gray-50 overflow-hidden">
       <div className="container px-4 py-20">
@@ -141,16 +145,28 @@ const RentalBike = ({ data }) => {
                     <div className="flex gap-2 text-primaryColor py-2"><FaStar /><FaStar /><FaStar /><FaStar /></div>
                     <h3 className="text-xl font-semibold text-gray-800">{bike.title}</h3>
                     <h3 className="font-semibold pt-2 text-blue-500">{bike?.price || "500"} / Day</h3>
-                    <motion.button
-                      variants={buttonVariants}
-                      initial="rest"
-                      whileHover="hover"
-                      onClick={() => handleWhatsAppClick(bike.title)}
-                      className="mt-6 w-full bg-gradient-to-r from-primaryColor to-yellow-400 text-white py-3 px-6 rounded-lg font-semibold 
-                      transform transition-all duration-300 hover:from-yellow-600 hover:to-yellow-700"
-                    >
-                      Book Now
-                    </motion.button>
+                    <div className="flex flex-col gap-3 mt-6">
+                      <motion.button
+                        variants={buttonVariants}
+                        initial="rest"
+                        whileHover="hover"
+                        onClick={handleBookNowClick}
+                        className="w-full bg-gradient-to-r from-primaryColor to-yellow-400 text-white py-3 px-4 rounded-lg font-semibold 
+                        transform transition-all duration-300 hover:from-yellow-600 hover:to-yellow-700"
+                      >
+                        Book Now
+                      </motion.button>
+                      <motion.button
+                        variants={buttonVariants}
+                        initial="rest"
+                        whileHover="hover"
+                        onClick={() => handleWhatsAppClick(bike.title)}
+                        className="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-4 rounded-lg font-semibold 
+                        transform transition-all duration-300"
+                      >
+                        Book on WhatsApp
+                      </motion.button>
+                    </div>
                   </div>
                 </div>
               </motion.div>

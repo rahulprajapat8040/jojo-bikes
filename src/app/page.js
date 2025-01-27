@@ -10,6 +10,7 @@ import { CiBookmarkCheck, CiViewBoard } from "react-icons/ci";
 import { GiTakeMyMoney } from "react-icons/gi";
 import MobileApp from "@/components/home/MobileApp";
 import PricingSection from "@/components/home/PricingSection";
+import FaqsData from "@/components/common/Faqs";
 const HeroData = {
   heading1: "Enjoy your ride!",
   heading2: "Self Ride Bike Rental",
@@ -309,45 +310,52 @@ const RentalBikes = {
 const OurTestiMonials = [
   {
     id: "1",
-    title: "Maab",
+    title: "Aman",
     description:
-      "I took active for 3 month from Jojo travel and their monthly charge did not fail to impress. They are do service of sccoty at regular interval and keep it at notch condition.",
-    image: '/assets/user-01.png'
+      "I had an amazing experience renting a bike from JOJO BIKE RENTAL, The staff was super friendly and helpful, and the bike was in great condition. The rental process was seamless and easy, and they provided me with a helmet for added safety. The bike was perfect for exploring the city, and I loved the freedom to ride wherever I wanted. The prices were also very reasonable. I would highly recommend JOJO BIKE RENTAL to anyone looking to rent a bike. I`ll definitely be back!`",
+    image: '/assets/user1.avif'
   },
   {
     id: "2",
-    title: "Cace",
+    title: "Varun",
     description:
-      "I recently rented royal Enfield 350 for a day through their website which is super easy to use. Every step is clearly instructed for the entire book process. There is no need for submitting your hard document. It was very reasonable in price. I verify you the process of renting at Jojo travel is highly time effective.",
-    image: '/assets/user-02.jpg'
+      "Jojo Bike Rental is best destination if you want scooters and activa on hire. The services is really good. They are very professional and offers you cool rides at reasonable prices. If you want to travel intercity or intracity then in both the cases you can contact them.",
+    image: '/assets/profileImg.jpeg'
   },
   {
     id: "3",
-    title: "Paaras",
+    title: "Navya",
     description:
-      "Me and my friends planed a road trip on bike and we book bikes from them have wide range of collection well maintained vehicles.",
-    image: '/assets/user-03.jpg'
+      "It's really great experience with Jojo nd actually thankful I meet a genuine agency prices are really affordable and planning with Jojo is so comfortable and flexible 😊😊",
+    image: '/assets/user02.jpg'
   },
   {
-    id: "1",
-    title: "Maab",
+    id: "4",
+    title: "Mannan Ali",
     description:
-      "I took active for 3 month from Jojo travel and their monthly charge did not fail to impress. They are do service of sccoty at regular interval and keep it at notch condition.",
-    image: '/assets/user-01.png'
+      "Amazing experience with JoJo Travel, and his team are very accommodating and honest. Their prices are reasonable and service is Good. They even went to the length to refund me for the additional fuel I left when returning the bike. Overall I believe this this is the best service in Jaipur and will recommend others looking to hire Motorbikes in Jaipur to use this company.",
+    image: '/assets/user03.jpg'
   },
   {
-    id: "2",
-    title: "Cace",
+    id: "5",
+    title: "Ankush",
     description:
-      "I recently rented royal Enfield 350 for a day through their website which is super easy to use. Every step is clearly instructed for the entire book process. There is no need for submitting your hard document. It was very reasonable in price. I verify you the process of renting at Jojo travel is highly time effective.",
-    image: '/assets/user-02.jpg'
+      "Good service, Decent price. The quality of the Vehicle was good. However the helmet we received had a broken visor which was an annoyance while driving. All over a good deal.",
+    image: '/assets/unnamed.png'
   },
   {
-    id: "3",
-    title: "Paaras",
+    id: "6",
+    title: "Deep Shikha",
     description:
-      "Me and my friends planed a road trip on bike and we book bikes from them have wide range of collection well maintained vehicles.",
-    image: '/assets/user-03.jpg'
+      "Great bike rental service! The booking was easy, the bike was in excellent condition, and the staff was friendly and helpful. It was a perfect way to explore the area, a smooth experience overall. Highly recommend!",
+    image: '/assets/unnamed1.png'
+  },
+  {
+    id: "7",
+    title: "Deep Shikha",
+    description:
+      "I had a fantastic experience with Jojo Bike Rental! The scooter I rented was in excellent condition, making my ride smooth and enjoyable throughout the day. The staff, including the owner, were incredibly friendly and welcoming. They were not only helpful with local insights but went above and beyond by offering to pick me up from my hotel to save time. It’s clear they truly care about their customers’ experience. Highly recommend Jojo Bike Rental for anyone looking for reliable, well-maintained scooters and exceptional service!",
+    image: '/assets/unnamed3.png'
   },
 ];
 
@@ -381,6 +389,50 @@ const GalleryData = [
     id: 6,
     image: "/assets/jojo-bajaz-sport.jpg",
     name: "Bajaj Sports"
+  },
+  {
+    id: 7,
+    image: "/assets/2024-11-26.jpg"
+  },
+  {
+    id: 8,
+    image: "/assets/2023-11-03.jpg"
+  },
+  {
+    id: 9,
+    image: "/assets/2023-11-03-01.jpg"
+  },
+  {
+    id: 10,
+    image: "/assets/2024-11-08.jpg"
+  },
+  
+]
+
+const Faqs = [
+  {
+    qustion: "What are the various plans avaible?",
+    answer: "Hassle-free booking, home delivery, activa maintenance and much more at great prices are available."
+  },
+  {
+    qustion: "What if i want to extend my booking",
+    answer: "If you want to extend your booking, you can call us for it. Booking extension is extra payable."
+  },
+  {
+    qustion: "Is Fuel Included In The package?",
+    answer: "No, fuel will not provide in the package. We will add a minimal amount of petrol to reach the fuel station."
+  },
+  {
+    qustion: "Will I have to pay for the helmet?",
+    answer: "No, you do not have to pay extra for the helmet. The helmet is complimentary from JOJO Travel."
+  },
+  {
+    qustion: "Documents required for activa renting",
+    answer: "Documents required for Activa renting are - ID proof and Driving Licence (Original). In case you are unable to show documents, the booking will cancel."
+  },
+  {
+    qustion: "How many kilometers can i Ride?",
+    answer: "You can ride up to 100 Kilometers a day."
   }
 ]
 
@@ -392,7 +444,8 @@ export default function Home() {
       <RentalBike data={RentalBikes} />
       <Testimonial data={OurTestiMonials} />
       <PricingSection />
-      <MobileApp/>
+      <FaqsData faqData={Faqs} />
+      <MobileApp />
       <OurGallery data={GalleryData} />
     </>
   );

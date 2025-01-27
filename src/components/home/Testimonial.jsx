@@ -6,7 +6,7 @@ import { FaTripadvisor } from "react-icons/fa";
 const Testimonial = ({ data }) => {
   return (
     <>
-      <section className="py-8 bg-white overflow-hidden">
+      <section className="py-8 bg-white">
         <div className="max-w-6xl px-4 mx-auto">
           <div className="text-center mb-8">
             <h1 className="text-3xl md:text-5xl drop-shadow-lg font-extrabold text-primaryColor">LATEST TESTIMONIAL</h1>
@@ -14,63 +14,70 @@ const Testimonial = ({ data }) => {
           </div>
           
           <div className="relative w-full overflow-hidden">
-            <motion.div 
-              className="flex"
-              initial={{ x: "0%" }}
-              animate={{ x: "-50%" }}
-              transition={{
-                x: {
-                  repeat: Infinity,
-                  repeatType: "loop",
-                  duration: 20,
-                  ease: "linear",
-                }
-              }}
-            >
-              {/* First set of testimonials */}
-              <div className="flex gap-8 min-w-full">
-                {data.map((testimonial, index) => (
-                  <div
-                    key={testimonial.id}
-                    className="w-[350px] flex-shrink-0 p-6 bg-white border-2 rounded-lg drop-shadow-xl"
-                  >
-                    <div className="flex items-center mb-4">
-                      <img
-                        src={testimonial.image}
-                        alt={testimonial.title}
-                        className="w-16 h-16 rounded-full object-cover mr-4"
-                      />
-                      <div>
-                        <h3 className="text-xl font-bold text-primaryColor">{testimonial.title}</h3>
+            <div className="overflow-hidden">
+              <motion.div 
+                className="flex gap-8"
+                initial={{ x: 0 }}
+                animate={{ 
+                  x: `-${(100/2) * data.length}%`  // Only move half the distance
+                }}
+                transition={{
+                  x: {
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    duration: data.length * 15, // Slower speed - 15 seconds per item
+                    ease: "linear",
+                    repeatDelay: 0.5 // Small delay between loops
+                  }
+                }}
+              >
+                {/* First set */}
+                <div className="flex gap-8 shrink-0">
+                  {data.map((testimonial) => (
+                    <div
+                      key={testimonial.id}
+                      className="w-[300px] sm:w-[350px] flex-shrink-0 p-6 bg-white border-2 rounded-lg shadow-lg"
+                      style={{ margin: "0 1rem" }}
+                    >
+                      <div className="flex items-center mb-4">
+                        <img
+                          src={testimonial.image}
+                          alt={testimonial.title}
+                          className="w-16 h-16 rounded-full object-cover mr-4"
+                        />
+                        <div>
+                          <h3 className="text-xl font-bold text-primaryColor">{testimonial.title}</h3>
+                        </div>
                       </div>
+                      <p className="text-gray-700">{testimonial.description}</p>
                     </div>
-                    <p className="text-gray-700">{testimonial.description}</p>
-                  </div>
-                ))}
-              </div>
-              
-              {/* Duplicate set of testimonials for seamless loop */}
-              <div className="flex gap-8 min-w-full">
-                {data.map((testimonial, index) => (
-                  <div
-                    key={`duplicate-${testimonial.id}`}
-                    className="w-[350px] flex-shrink-0 p-6 bg-white border-2 rounded-lg drop-shadow-xl"
-                  >
-                    <div className="flex items-center mb-4">
-                      <img
-                        src={testimonial.image}
-                        alt={testimonial.title}
-                        className="w-16 h-16 rounded-full object-cover mr-4"
-                      />
-                      <div>
-                        <h3 className="text-xl font-bold text-primaryColor">{testimonial.title}</h3>
+                  ))}
+                </div>
+                
+                {/* Duplicate set */}
+                <div className="flex gap-8 shrink-0">
+                  {data.map((testimonial) => (
+                    <div
+                      key={`duplicate-${testimonial.id}`}
+                      className="w-[300px] sm:w-[350px] flex-shrink-0 p-6 bg-white border-2 rounded-lg shadow-lg"
+                      style={{ margin: "0 1rem" }}
+                    >
+                      <div className="flex items-center mb-4">
+                        <img
+                          src={testimonial.image}
+                          alt={testimonial.title}
+                          className="w-16 h-16 rounded-full object-cover mr-4"
+                        />
+                        <div>
+                          <h3 className="text-xl font-bold text-primaryColor">{testimonial.title}</h3>
+                        </div>
                       </div>
+                      <p className="text-gray-700">{testimonial.description}</p>
                     </div>
-                    <p className="text-gray-700">{testimonial.description}</p>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
           </div>
 
           <div className="py-4 my-2 flex justify-center">

@@ -126,13 +126,20 @@ const Header = () => {
 
             {/* Mobile Menu */}
             <motion.div 
-              className="absolute top-full left-0 right-0 w-full bg-white shadow-lg md:hidden"
-              initial={{ height: 0, opacity: 0 }}
+              className={`absolute top-full left-0 right-0 w-full bg-white shadow-lg md:hidden overflow-hidden ${
+                isOpen ? 'pointer-events-auto' : 'pointer-events-none'
+              }`}
+              initial={{ height: 0, opacity: 0, display: 'none' }}
               animate={{ 
                 height: isOpen ? "auto" : 0,
-                opacity: isOpen ? 1 : 0
+                opacity: isOpen ? 1 : 0,
+                display: isOpen ? 'block' : 'none',
+                transition: {
+                  height: { duration: 0.3 },
+                  opacity: { duration: 0.2 },
+                  display: { delay: isOpen ? 0 : 0.3 }
+                }
               }}
-              transition={{ duration: 0.3 }}
             >
               <ul className="py-4 px-4">
                 {links.map((items) => (

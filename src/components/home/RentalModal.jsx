@@ -8,7 +8,6 @@ const RentalModal = ({ isOpen, onClose }) => {
         startDate: "",
         endDate: "",
         name: "",
-        email: "",
         phone: "",
     });
 
@@ -49,7 +48,7 @@ const RentalModal = ({ isOpen, onClose }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+
         // Format the message for WhatsApp
         const message = `
 *New Bike Rental Request*
@@ -59,19 +58,18 @@ const RentalModal = ({ isOpen, onClose }) => {
 *End Date:* ${formData.endDate}
 *Customer Details:*
 Name: ${formData.name}
-Email: ${formData.email}
 Phone: ${formData.phone}
         `.trim();
-    
+
         // Encode the message for URL
         const encodedMessage = encodeURIComponent(message);
-        
+
         // Create WhatsApp link with your number
         const whatsappUrl = `https://wa.me/918503027210?text=${encodedMessage}`;
-        
+
         // Open WhatsApp in new window
         window.open(whatsappUrl, '_blank');
-        
+
         // Close the modal
         onClose();
     };
@@ -166,21 +164,6 @@ Phone: ${formData.phone}
                                     className="w-full p-3 outline-none border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                 />
                             </div>
-
-                            <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">
-                                    Email
-                                </label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    required
-                                    className="w-full p-3 outline-none border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                                />
-                            </div>
-
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-1">
                                     Phone Number

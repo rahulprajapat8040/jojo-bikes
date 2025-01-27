@@ -264,10 +264,10 @@ const HeroSection = ({ data }) => {
                     initial={{ width: 0 }}
                     animate={{ width: "100px" }}
                     transition={{ duration: 1 }}
-                    className={`h-1 ${isExpanded ? 'bg-white' : 'bg-white'} mb-8`}
+                    className={`h-1 ${isExpanded ? 'bg-primaryColor' : 'bg-primaryColor'} mb-8`}
                   />
                   <motion.h1
-                    className={`text-6xl text-center md:text-7xl font-bold leading-tight ${isExpanded ? 'text-white' : 'text-white'
+                    className={`text-6xl text-center md:text-7xl font-bold leading-tight ${isExpanded ? 'text-primaryColor' : 'text-primaryColor'
                       } drop-shadow-lg`}
                   >
                     {isExpanded ? alternateContent.heading1 : data.heading1}
@@ -296,7 +296,7 @@ const HeroSection = ({ data }) => {
                       }}
                       whileTap={{ scale: 0.95 }}
                       onClick={() => setIsModalOpen(true)}
-                      className="px-10 py-4 bg-white text-black rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-white/25"
+                      className="px-10 py-4 bg-primaryColor text-white rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-white/25"
                     >
                       Rent Now
                     </motion.button>
@@ -307,7 +307,7 @@ const HeroSection = ({ data }) => {
                           backgroundColor: "rgba(255,255,255,0.1)",
                         }}
                         whileTap={{ scale: 0.95 }}
-                        className="px-10 py-4 border-2 border-white text-white rounded-full font-semibold transition-all duration-300 backdrop-blur-sm"
+                        className="px-10 py-4 border-2 border-primaryColor text-primaryColor rounded-full font-semibold transition-all duration-300 backdrop-blur-sm"
                       >
                         Call Now
                       </motion.button>
