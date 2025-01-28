@@ -20,10 +20,10 @@ const WhyJojoBike = ({ data }) => {
         <div className="md:hidden">
           <div className="relative w-[250px] h-[250px] mx-auto mb-8">
             <Image
-              src="/assets/beauty-on-scooter.png"
+              src="/assets/girl-on-scooty.jpg"
               alt="Scooter"
               fill
-              className="object-contain rounded-full"
+              className="object-cover rounded-full"
             />
           </div>
           <div className="space-y-6">
@@ -45,10 +45,10 @@ const WhyJojoBike = ({ data }) => {
         <div className="relative hidden md:block">
           <div className="relative w-[400px] h-[400px] mx-auto">
             <Image
-              src="/assets/beauty-on-scooter.png"
+              src="/assets/girl-on-scooty.jpg"
               alt="Scooter"
               fill
-              className="object-contain rounded-full"
+              className="object-cover  rounded-full"
             />
             <div className="absolute inset-[-40px] border-4 border-dashed border-primaryColor rounded-full animate-spin-slow" />
 

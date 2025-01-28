@@ -201,7 +201,7 @@ Travel around Jaipur hassle-free by renting an activa and enjoy the essence of r
     ]
 
     const HeroData = {
-        videoUrl: '/assets/8070865-uhd_3840_2160_24fps.mp4',
+        videoUrl: '/assets/about-bg.mp4',
         title: 'Rent a Scooter at Jojo Travels'
     }
 
