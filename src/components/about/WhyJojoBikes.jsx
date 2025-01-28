@@ -4,7 +4,6 @@ import { useRef } from 'react'
 import { useInView } from 'framer-motion'
 
 const WhyJojoBikes = ({ WhyJojoBikesData,  title}, ) => {
-    {console.log(title)}
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true })
 
@@ -18,7 +17,7 @@ const WhyJojoBikes = ({ WhyJojoBikesData,  title}, ) => {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                        { title || "Why Choose JoJo Bikes?" }
+                        { title || "Why Choose JoJo Bike Rental?" }
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                         Experience the perfect blend of convenience, quality, and affordability

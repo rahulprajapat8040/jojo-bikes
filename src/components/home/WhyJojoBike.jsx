@@ -12,7 +12,7 @@ const WhyJojoBike = ({ data }) => {
       <div className="container mx-auto px-4">
         <SlideInView>
           <h2 className="text-3xl font-bold py-3 text-center mb-8 md:mb-12">
-            Why Choose Jojo Bike
+            Why Choose Jojo Bike Rental
           </h2>
         </SlideInView>
 

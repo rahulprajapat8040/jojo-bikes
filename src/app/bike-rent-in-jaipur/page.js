@@ -299,7 +299,7 @@ The best way to utilize your time and money at the time of traveling from one pl
 
     const HeroData = {
         videoUrl: '/assets/bike-bg.mp4',
-        title: 'Rent a Bike at Jojo Travels'
+        title: 'Rent a Bike at Jojo Bike Rental'
     }
 
     const Faqs = [

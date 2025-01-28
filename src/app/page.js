@@ -15,7 +15,7 @@ const HeroData = {
   heading1: "Enjoy your ride!",
   heading2: "Self Ride Bike Rental",
   paragraph:
-    "If You are searching Activa on rent in Jaipur and bike or scotty on rent in Jaipur then JoJo Bikes has been Giving you the best Rental bike or activa in Jaipur.",
+    "If You are searching Activa on rent in Jaipur and bike or scotty on rent in Jaipur then JoJo Bike Rental has been Giving you the best Rental bike or activa in Jaipur.",
     videoUrl:"/assets/8070865-uhd_3840_2160_24fps.mp4"
 };
 

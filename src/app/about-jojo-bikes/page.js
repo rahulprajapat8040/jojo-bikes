@@ -2,7 +2,7 @@ import Hero from "@/components/about/Hero"
 import WhyJojoBikes from "@/components/about/WhyJojoBikes"
 
 export const metadata = {
-  title: 'About JOJO Bikes | Premier Bike Rental Service in Jaipur',
+  title: 'About JOJO Bike Rental | Premier Bike Rental Service in Jaipur',
   description: 'Discover JOJO Bikes - Jaipur\'s trusted two-wheeler rental service. We offer Activa, bikes & scooties with 24/7 support, doorstep delivery & affordable rates. Experience hassle-free bike rentals in Jaipur.',
   keywords: 'bike rental Jaipur, Activa on rent Jaipur, scooty rental Jaipur, two-wheeler rental service, bike hire Jaipur, monthly bike rental Jaipur, affordable bike rental, JOJO Bikes about, best bike rental service Jaipur',
   openGraph: {
@@ -34,7 +34,7 @@ export const metadata = {
 
 const AboutJojoBikes = () => {
     const HeroData = {
-        title: "ABOUT JOJO Bikes",
+        title: "ABOUT JOJO Bike Rental",
         para0: "In These days of owning an Activa are long gone. The new Future of booking on the go and renting is here. And it is here to stay. Activa on rent in Jaipur and Bike on rent in Jaipur are the new age passions. JoJo BIkes, a startup created with the vision of making transportation hassle-free, affordable and efficient.",
         para1: 'If You are searching Activa on rent in Jaipur and bike or scotty on rent in Jaipur then JoJo Bikes has been Giving you the best Rental bike or activa in Jaipur. We are now expanding to Rajasthan For Activa and scooty for rent in Jaipur We have range of Activa and bikes, JoJo Travel is committed to customer satisfaction. JOJo Bikes provides Activa on rent in Jaipur, Bieks on rent in Jaipur,',
         para2: 'Monthly scooty and bike rental in jaipur and activa on rent in Jaipur is very reasonable and In ,If You think for Rental bikes “which is the bike rental near me” query would lead you straight to JOJo BIkeswith reasonable prices, we don’t need to hard documentation requirement, and 24X7 servicing makes JoJO Bikes ',
