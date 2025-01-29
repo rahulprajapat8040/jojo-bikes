@@ -1,13 +1,14 @@
 
 export const metadata = {
-    title: 'Terms & Conditions - Jojo Travel Bike Rental Jaipur',
+    metadataBase: new URL('https://www.jojobikerental.in'),
+    title: 'Terms & Conditions - Jojo bike rental Bike Rental Jaipur',
     description: 'Read our comprehensive terms and conditions for bike and scooty rentals in Jaipur. Includes rental policies, documentation requirements, and accident terms for two-wheeler rentals.',
-    keywords: 'bike rental terms jaipur, scooty rental conditions, jojo travel policies, bike hire terms and conditions jaipur, two wheeler rental agreement',
+    keywords: 'bike rental terms jaipur, scooty rental conditions, Jojo bike rental policies, bike hire terms and conditions jaipur, two wheeler rental agreement',
     openGraph: {
-        title: 'Terms & Conditions | Jojo Travel Bike Rental',
-        description: 'Important terms and conditions for renting bikes and scooties from Jojo Travel in Jaipur. Learn about our policies, documentation requirements, and rental guidelines.',
+        title: 'Terms & Conditions | Jojo bike rental Bike Rental',
+        description: 'Important terms and conditions for renting bikes and scooties from Jojo bike rental in Jaipur. Learn about our policies, documentation requirements, and rental guidelines.',
         type: 'website',
-        url: 'https://jojobikes.com/term-condition',
+        url: 'https://www.jojobikerental.in/term-condition',
         images: [
             {
                 url: '/assets/jojo-bike-og-image.jpg',
@@ -17,28 +18,28 @@ export const metadata = {
             }
         ],
         locale: 'en_IN',
-        siteName: 'Jojo Travel'
+        siteName: 'Jojo bike rental'
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Terms & Conditions - Jojo Travel Bike Rental',
+        title: 'Terms & Conditions - Jojo bike rental Bike Rental',
         description: 'Read our rental terms and policies for bike and scooty rentals in Jaipur.',
         images: ['/assets/jojo-bike-og-image.jpg'],
     },
     alternates: {
-        canonical: 'https://jojobikes.com/term-condition'
+        canonical: 'https://www.jojobikerental.in/term-condition'
     }
 }
 
 export default function TermsCondition() {
     const otherTerms = [
         'Our office timings are from 9 am to 8 pm. All bookings fall within this time period and no pick-ups or drop-offs can be scheduled before 9 am or after 8 pm.',
-        'Two-wheeler bookings are subject to availability. JoJo Travel-Reserves the right to cancel any booking if deemed necessary.',
+        'Two-wheeler bookings are subject to availability. Jojo bike rental-Reserves the right to cancel any booking if deemed necessary.',
         'We provide Two Helmets per two-wheeler on rent as complimentary and they have to be returned without any damages during the drop.',
         'Rider should respect and follow Traffic rules and regulations. All Challans issued due to rider negligence need to be paid in full to the penalizing authority.',
-        'Rider will ensure proper care of keys and other properties of JoJo Travel If Loss or damage will attract charges.',
+        'Rider will ensure proper care of keys and other properties of Jojo bike rental If Loss or damage will attract charges.',
         'Rider will park vehicle in appropriate parking areas. Rider is liable to pay a penalty of Rs 700 in case of tow away or confiscation of bike inaddition to the Challan amount levied by Traffic Police.',
-        'Driving under the influence of Alcohol/Drugs is strictly prohibited. JoJo Travel will not be responsible to compensate for any mishaps and their consequences in such cases. The customer will be liable to pay for all damages to the vendor for the same.',
+        'Driving under the influence of Alcohol/Drugs is strictly prohibited. Jojo bike rental will not be responsible to compensate for any mishaps and their consequences in such cases. The customer will be liable to pay for all damages to the vendor for the same.',
         'Customer has to drop the bike at the same location from where it was picked up. No requests will be accommodated for a change in the drop location.',
         'In case a customer feels that they will be late for the drop, they should call the Office Contact Number or customer care and ask for a trip extension. Extensions are subject to availability.',
         'The Pick-up date, time and location cannot be changed once a booking is confirmed.',
@@ -47,7 +48,7 @@ export default function TermsCondition() {
 
     const rentalPolicies = [
         'The two-wheeler needs to be returned at the specified Date and Time as mentioned A delay of more than 15 minutes without intimating the customer care (On Call) or executive will attract a penalty of Rs 100/hr as well as the standard hourly charges.',
-        'The customer is not authorized to lend the two-wheeler to any person without permission of JoJo Travel In such cases we will need to verify the documents of the additional rider before starting the trip. Failure to do so would attract a penalty of Rs. 1000.',
+        'The customer is not authorized to lend the two-wheeler to any person without permission of Jojo bike rental In such cases we will need to verify the documents of the additional rider before starting the trip. Failure to do so would attract a penalty of Rs. 1000.',
         'The rented vehicles should not be used in any event Eg. Rallies, Racing purpose, Stunts, Goods Transportation or to tow any vehicle.',
         'In case of minor damages to the helmet, the customer is liable to pay Rs.200/helmet and in case of major damage or loss of the helmet, the customer is liable to pay a fine of Rs. 800.',
         'The vehicle speeds are tracked and monitored remotely through GPS devices to ensure safety of all JoJo Bikes Riders. For every Over-speeding beyond speed limit there will be a fine of Rs 100 per alert(Speed limits are, 100-149 CC Bikes – 70 KMPH).'

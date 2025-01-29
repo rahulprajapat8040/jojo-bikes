@@ -18,7 +18,7 @@ const Header = () => {
     },
     {
       name: "About",
-      url: "/about-jojo-bikes",
+      url: "/about-jojo-bike-rental",
     },
     {
       name: "Bike Rent",
@@ -45,7 +45,7 @@ const Header = () => {
         <div className="max-w-6xl w-full flex justify-center">
           <nav className="w-full relative">
             <div className="flex items-center justify-between w-full">
-              <div>
+              <Link href={'/'}>
                 <Image
                   src={"/JOJOLOGO.png"}
                   width={90}
@@ -53,7 +53,7 @@ const Header = () => {
                   alt="Jojobikes"
                   className="object-cover"
                 />
-              </div>
+              </Link>
               
               {/* Desktop Menu */}
               <div className="hidden md:flex items-center gap-8">

@@ -9,6 +9,7 @@ import { FaStar } from "react-icons/fa";
 
 const RentalBike = ({ data }) => {
   const [selectedType, setSelectedType] = useState("all");
+  const [displayLimit, setDisplayLimit] = useState(12);
 
   // Get unique types from bikes and filter out undefined/null values
   const bikeTypes = ["all", ...new Set(data.Bikes.map(bike => bike.type).filter(Boolean))];
@@ -17,6 +18,14 @@ const RentalBike = ({ data }) => {
   const filteredBikes = selectedType === "all"
     ? data.Bikes
     : data.Bikes.filter(bike => bike.type && bike.type === selectedType);
+
+  // Slice the bikes array based on display limit
+  const bikesToShow = filteredBikes.slice(0, displayLimit);
+  const hasMore = filteredBikes.length > displayLimit;
+
+  const handleLoadMore = () => {
+    setDisplayLimit(prev => prev + 12);
+  };
 
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -57,7 +66,7 @@ const RentalBike = ({ data }) => {
   };
 
   const handleWhatsAppClick = (bikeName) => {
-    const message = `Hello Jojo Travel, I want to rent ${bikeName}`;
+    const message = `Hello Jojo bike rental, I want to rent ${bikeName}`;
     const phoneNumber = "8503027210";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -71,7 +80,14 @@ const RentalBike = ({ data }) => {
     <section className="flex justify-center bg-gradient-to-b from-white to-gray-50 overflow-hidden">
       <div className="container px-4 py-20">
         <SlideInView>
-          <h2 className="text-4xl font-bold text-center bg-gradient-to-r from-primaryColor to-yellow-700 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold text-center" 
+              style={{
+                background: '-webkit-linear-gradient(right, #FF8008, #b8860b)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                color: 'transparent'
+              }}>
             {data.title}
           </h2>
           {data.subTitle && (
@@ -115,7 +131,7 @@ const RentalBike = ({ data }) => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto gap-8 mt-16"
         >
           <AnimatePresence mode="popLayout">
-            {filteredBikes.map((bike) => (
+            {bikesToShow.map((bike) => (
               <motion.div
                 key={bike.id}
                 layout
@@ -173,6 +189,26 @@ const RentalBike = ({ data }) => {
             ))}
           </AnimatePresence>
         </motion.div>
+
+        {/* Load More Button */}
+        {hasMore && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="flex justify-center mt-12"
+          >
+            <motion.button
+              variants={buttonVariants}
+              initial="rest"
+              whileHover="hover"
+              onClick={handleLoadMore}
+              className="px-8 py-3 rounded-lg font-medium bg-gradient-to-r from-primaryColor to-yellow-500 text-white shadow-lg 
+              transform transition-all duration-300 hover:shadow-xl"
+            >
+              Load More
+            </motion.button>
+          </motion.div>
+        )}
       </div>
     </section>
   );
