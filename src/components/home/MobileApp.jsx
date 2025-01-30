@@ -17,7 +17,7 @@ const MobileApp = () => {
                 <div
                     ref={ref1}
                     className="max-w-6xl mx-auto px-4">
-                    <div className='flex justify-center pt-10'> <Image src={'/assets/jojo-logo-full-dark.png'} width={200} height={200} alt='jojo-logo-dark' /></div>
+                    <div className='flex justify-center pt-10'> <Image src={'/JOJOLOGO.png'} width={150} height={150} alt='jojo-logo-dark' /></div>
                     <h1 className="text-center  text-5xl font-semibold text-primaryColor drop-shadow-lg">Rent Faster, Better Experience</h1>
                     <div className="flex flex-col md:flex-row items-center justify-center md:gap-32 w-full">
                         <motion.div

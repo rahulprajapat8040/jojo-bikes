@@ -31,7 +31,7 @@ const socialIcons = {
 const Footer = () => {
     return (
         <footer className="bg-gradient-to-b from-white to-gray-100 via-white border-t">
-            <div className="max-w-7xl mx-auto px-4 py-16">
+            <div className="max-w-7xl mx-auto px-4 pt-16">
                 {/* Upper Section with Logo and Description */}
                 <div className="flex flex-col items-center text-center mb-16 space-y-6">
                     <Link href="/" className="block">
@@ -107,12 +107,12 @@ const Footer = () => {
                                     <span className="text-sm hover:translate-x-1 transition-transform">{phone}</span>
                                 </a>
                             ))}
-                            <a href="mailto:info@jojotravel.in" 
+                            <a href="mailto:Info@jojobikerental.com" 
                                className="text-gray-600 hover:text-primaryColor transition-colors flex items-center gap-2 w-fit pt-1">
                                 <svg className="w-4 h-4 text-primaryColor/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
-                                <span className="hover:translate-x-1 transition-transform">info@jojotravel.in</span>
+                                <span className="hover:translate-x-1 transition-transform">Info@jojobikerental.com</span>
                             </a>
                         </div>
                     </div>
@@ -160,7 +160,7 @@ const Footer = () => {
                                 Ganpati Plaza, M I Road Jaipur,<br/>
                                 Rajasthan - 302001
                             </p>
-                            <Link href="https://maps.app.goo.gl/q8aC9GzLqWkUvVVU7" 
+                            <Link href="https://maps.app.goo.gl/QsjbHJJaJZSaVt1o6" 
                                target="_blank"
                                className="inline-flex items-center text-primaryColor hover:text-primaryColor/80 transition-colors gap-2 group w-fit">
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -174,7 +174,7 @@ const Footer = () => {
                 </div>
 
                 {/* Copyright Section */}
-                <div className="border-t border-gray-200 pt-8">
+                <div className="border-t border-gray-200 py-4">
                     <p className="text-center text-gray-600">
                         © {new Date().getFullYear()} Jojo Bike Rental Jaipur. All rights reserved.
                     </p>
