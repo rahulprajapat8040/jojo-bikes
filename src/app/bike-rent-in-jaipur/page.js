@@ -122,6 +122,7 @@ Jojo bike rental provides the best offer of Royal Enfield on rent in Jaipur. We 
                 transmission: "Manual",
                 Fuel: "Petrol",
                 Passenger: "2",
+                price: 1000,
                 image: "/assets/bike-on-rent-in-jaipur.png",
             },
             {
@@ -131,6 +132,7 @@ Jojo bike rental provides the best offer of Royal Enfield on rent in Jaipur. We 
                 transmission: "Manual",
                 Fuel: "Petrol",
                 Passenger: "2",
+                price: 1500,
                 image: "/assets/ktm-duke-best-offer.png",
             },
             {
@@ -140,6 +142,7 @@ Jojo bike rental provides the best offer of Royal Enfield on rent in Jaipur. We 
                 transmission: "Manual",
                 Fuel: "Petrol",
                 Passenger: "2",
+                price: 3000,
                 image: "/assets/bike-rent-in-jaipur-near-me.png",
             },
             {
@@ -149,6 +152,7 @@ Jojo bike rental provides the best offer of Royal Enfield on rent in Jaipur. We 
                 transmission: "Manual",
                 Fuel: "Petrol",
                 Passenger: "2",
+                price: 2000,
                 image: "/assets/hire-ktm-bike-on-rent-in-jaipur.png",
             },
             {
@@ -158,6 +162,7 @@ Jojo bike rental provides the best offer of Royal Enfield on rent in Jaipur. We 
                 transmission: "Manual",
                 Fuel: "Petrol",
                 Passenger: "2",
+                price: 1500,
                 image: "/assets/affordable-ktm-bike-on-rent-in-jaipur.png",
             },
             {
@@ -167,6 +172,7 @@ Jojo bike rental provides the best offer of Royal Enfield on rent in Jaipur. We 
                 transmission: "Manual",
                 Fuel: "Petrol",
                 Passenger: "2",
+                price: 1300,
                 image: "/assets/rent-in-jaipur-ktm-bike.png",
             },
             {
@@ -176,26 +182,27 @@ Jojo bike rental provides the best offer of Royal Enfield on rent in Jaipur. We 
                 transmission: "Manual",
                 Fuel: "Petrol",
                 Passenger: "2",
+                price: 5000,
                 image: "/assets/hire-harley-davidson-bike-on-rent-in-jaipur.png",
             },
             {
                 id: "8",
                 title: "Harley Davidson Street Bob",
                 type: "harley",
-
                 transmission: "Automatic",
                 Fuel: "Petrol",
                 Passenger: "2",
+                price: 5500,
                 image: "/assets/affordable-harley-davidson-bike-on-rent-in-jaipur.png",
             },
             {
                 id: "9",
                 title: "Harley Davidson PAN",
                 type: "harley",
-
                 transmission: "Automatic",
                 Fuel: "Petrol",
                 Passenger: "2",
+                price: 6000,
                 image: "/assets/bike-on-rent-in-jaipur-harley-davidson.png",
             },
             {
@@ -203,9 +210,9 @@ Jojo bike rental provides the best offer of Royal Enfield on rent in Jaipur. We 
                 title: "Yamaha FZ-Fi ",
                 transmission: "Automatic",
                 type: "sports",
-
                 Fuel: "Petrol",
                 Passenger: "2",
+                price: 1000,
                 image: "/assets/affordable-two-wheeler-on-rent-in-jaipur.png",
             },
             {
@@ -215,6 +222,7 @@ Jojo bike rental provides the best offer of Royal Enfield on rent in Jaipur. We 
                 type: "sports",
                 Fuel: "Petrol",
                 Passenger: "2",
+                price: 800,
                 image: "/assets/hire-two-wheeler-on-rent-in-jaipur.png",
             },
             {
@@ -223,6 +231,7 @@ Jojo bike rental provides the best offer of Royal Enfield on rent in Jaipur. We 
                 transmission: "Automatic",
                 Fuel: "Petrol",
                 Passenger: "2",
+                price: 900,
                 image: "/assets/2-wheeler-on-rent-in-jaipur.png",
             },
             {
@@ -232,6 +241,7 @@ Jojo bike rental provides the best offer of Royal Enfield on rent in Jaipur. We 
                 transmission: "Automatic",
                 Fuel: "Petrol",
                 Passenger: "2",
+                price: 1200,
                 image: "/assets/hire-bullet-on-rent-in-jaipur.png",
             },
             {
@@ -239,9 +249,9 @@ Jojo bike rental provides the best offer of Royal Enfield on rent in Jaipur. We 
                 title: "Royal Enfield Classic BS6",
                 transmission: "Automatic",
                 type: "bullet",
-
                 Fuel: "Petrol",
                 Passenger: "1",
+                price: 1250,
                 image: "/assets/affordable-bullet-on-rent-in-jaipur.png",
             },
             {
@@ -249,13 +259,11 @@ Jojo bike rental provides the best offer of Royal Enfield on rent in Jaipur. We 
                 title: "Royal Enfield Classic 350",
                 transmission: "Automatic",
                 type: "bullet",
-
                 Fuel: "Petrol",
                 Passenger: "2",
+                price: 1300,
                 image: "/assets/rent-in-Jaipur-bullet.png",
             },
-
-
         ]
     }
 
