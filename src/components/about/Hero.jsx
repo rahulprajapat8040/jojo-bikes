@@ -1,8 +1,6 @@
 'use client'
 import { motion, useInView } from 'framer-motion'
-import { FaUsers, FaFlagCheckered } from "react-icons/fa";
-import { MdOutlineDirectionsBike } from "react-icons/md";
-import { RiCustomerService2Line } from "react-icons/ri";
+import { FaUsers } from "react-icons/fa";
 import { useRef } from 'react';
 import Counter from '../common/Counter';
 
@@ -21,7 +19,7 @@ const Hero = ({ HeroData }) => {
 
     return (
         <>
-            <section className="flex overflow-x-hidden justify-center bg-white">
+            <section className="flex justify-center">
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -50,20 +48,18 @@ const Hero = ({ HeroData }) => {
                             <motion.div
                                 initial={{ opacity: 0, x: -50 }}
                                 animate={{ opacity: isInView1 ? 1 : 0, x: isInView1 ? 0 : -50 }}
-                                transition={{ duration: 0.3, delay: 0.3 }}
+                                transition={{ duration: 0.7, delay: 0.3 }}
                                 ref={ref1}
-                                whileHover={{ scale: 1.02 }}
-                                className="bg-gradient-to-br p-2 from-sky-600 to-blue-800 md:p-6 rounded-lg shadow-sm">
-                                <p className="text-white">{HeroData.para1}</p>
+                                className="bg-gray-50 md:p-6 rounded-lg shadow-sm">
+                                <p className="text-gray-700">{HeroData.para1}</p>
                             </motion.div>
                             <motion.div
                                 initial={{ opacity: 0, x: -50 }}
                                 animate={{ opacity: isInView2 ? 1 : 0, x: isInView2 ? 0 : -50 }}
-                                transition={{ duration: 0.2, delay: 0.5 }}
+                                transition={{ duration: 0.7, delay: 0.5 }}
                                 ref={ref2}
-                                whileHover={{ scale: 0.9 }}
-                                className="bg-gradient-to-br p-2 from-sky-600 to-blue-800 md:p-6 rounded-lg shadow-sm">
-                                <p className="text-white">{HeroData.para2}</p>
+                                className="bg-gray-50 md:p-6 rounded-lg shadow-sm">
+                                <p className="text-gray-700">{HeroData.para2}</p>
                             </motion.div>
                         </div>
 
@@ -86,87 +82,23 @@ const Hero = ({ HeroData }) => {
                             <motion.div
                                 initial={{ opacity: 0, x: 50 }}
                                 animate={{ opacity: isInView4 ? 1 : 0, x: isInView4 ? 0 : 50 }}
-                                transition={{ duration: 0.1, delay: 0.7 }}
+                                transition={{ duration: 0.7, delay: 0.7 }}
                                 ref={ref4}
-                                whileHover={{ scaleX: 1.02 }}
-                                className="bg-gradient-to-br p-2 from-sky-600 to-blue-800 md:p-6 rounded-lg shadow-sm">
-                                <p className="text-white">{HeroData.para3}</p>
+                                className="bg-gray-50 md:p-6 rounded-lg shadow-sm">
+                                <p className="text-gray-700">{HeroData.para3}</p>
                             </motion.div>
                         </div>
                     </div>
                 </motion.div>
             </section>
-            <section className='w-full py-12 bg-gradient-to-tr from-white via-gray-200 to-gray-100'>
-                <div className='max-w-6xl w-full mx-auto px-4'>
-                    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 border-b py-5'>
-                        <motion.div
-                            className='relative group p-6 rounded-xl overflow-hidden transition-all duration-300'
-                            style={{
-                                background: '#fff',
-                                backdropFilter: 'blur(10px)',
-                            }}
-                            whileHover={{ scale: 1.02 }}
-                        >
-                            <div className='absolute inset-0 bg-gradient-to-r from-purple-600/30 via-pink-600/30 to-blue-600/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
-                            <div className='relative flex flex-col items-center gap-3'>
-                                <FaUsers className='text-yellow-400 group-hover:text-yellow-300 transform group-hover:scale-110 transition-all duration-300' size={50} />
-                                <div className='text-4xl font-bold bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-200 bg-clip-text text-transparent'>
-                                    <Counter end={25000} duration={2500} />
-                                </div>
-                                <p className='text-black font-semibold text-lg text-center'>Happy Customers</p>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            className='relative bg-white group p-6 rounded-xl overflow-hidden transition-all duration-300'
-                            style={{
-                                backdropFilter: 'blur(10px)',
-                            }}
-                            whileHover={{ scale: 1.02 }}
-                        >
-                            <div className='absolute inset-0 bg-gradient-to-r from-blue-600/30 via-cyan-600/30 to-teal-600/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
-                            <div className='relative flex flex-col items-center gap-3'>
-                                <MdOutlineDirectionsBike className='text-yellow-400 group-hover:text-yellow-300 transform group-hover:scale-110 transition-all duration-300' size={50} />
-                                <div className='text-4xl font-bold bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-200 bg-clip-text text-transparent'>
-                                    <Counter end={1000} duration={2500} />
-                                </div>
-                                <p className='text-black font-semibold text-lg text-center'>BIKES IN GARAGE</p>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            className='relative group bg-white p-6 rounded-xl overflow-hidden transition-all duration-300'
-                            style={{
-                                backdropFilter: 'blur(10px)',
-                            }}
-                            whileHover={{ scale: 1.02 }}
-                        >
-                            <div className='absolute inset-0 bg-gradient-to-r from-green-600/30 via-emerald-600/30 to-teal-600/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
-                            <div className='relative flex flex-col items-center gap-3'>
-                                <FaFlagCheckered className='text-yellow-400 group-hover:text-yellow-300 transform group-hover:scale-110 transition-all duration-300' size={50} />
-                                <div className='text-4xl font-bold bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-200 bg-clip-text text-transparent'>
-                                    <Counter end={100000} duration={2500} />
-                                </div>
-                                <p className='text-black font-semibold text-lg text-center'>TOTAL KILOMETER/MIL</p>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            className='relative bg-white group p-6 rounded-xl overflow-hidden transition-all duration-300'
-                            style={{
-                                backdropFilter: 'blur(10px)',
-                            }}
-                            whileHover={{ scale: 1.02 }}
-                        >
-                            <div className='absolute inset-0 bg-gradient-to-r from-red-600/30 via-orange-600/30 to-yellow-600/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
-                            <div className='relative flex flex-col items-center gap-3'>
-                                <RiCustomerService2Line className='text-yellow-400 group-hover:text-yellow-300 transform group-hover:scale-110 transition-all duration-300' size={50} />
-                                <div className='text-4xl font-bold bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-200 bg-clip-text text-transparent'>
-                                    <Counter end={50} duration={2500} />
-                                </div>
-                                <p className='text-black font-semibold text-lg text-center'>BIKES CENTER SOLUTIONS</p>
-                            </div>
-                        </motion.div>
+            <section className='w-full py-7 bg-gradient-to-t from-gray-700 to-gray-900'>
+                <div className='max-w-6xl w-full mx-auto'>
+                    <div className='flex items-center justify-center flex-col gap-3'>
+                        <div className='flex items-center flex-col gap-2'>
+                            <FaUsers size={50} color='yellow' />
+                            <Counter end={1000} duration={2500} />
+                            <p className='text-white'>Happy Customers</p>
+                        </div>
                     </div>
                 </div>
             </section>
