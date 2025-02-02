@@ -3,10 +3,9 @@ import Image from 'next/image';
 export default function PricingSection() {
     return (
         <section
-            className="relative bg-cover bg-bottom min-h-[400px] md:h-[500px] bg-no-repeat py-8 md:py-16"
+            className="relative bg-cover bg-right md:bg-center min-h-[400px] md:h-[500px] bg-no-repeat py-8 md:py-16"
             style={{
-                backgroundImage: 'url(/bg-hero-02-800x960.jpg)',
-                clipPath: 'path("M 0 0 L 100% 0 L 100% 85% C 75% 85%, 50% 100%, 25% 85% L 0 85% Z")'
+                backgroundImage: 'url(/assets/asphalt-backpack-daylight-desert.jpg)',
             }}
         >
             {/* Overlay */}
