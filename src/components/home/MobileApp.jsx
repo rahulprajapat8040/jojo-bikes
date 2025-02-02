@@ -1,23 +1,26 @@
 'use client'
 import { motion, useInView } from 'motion/react'
 import Image from "next/image"
-import { useRef } from 'react'
+import Link from 'next/link'
+import { useRef, useState } from 'react'
+import RentalModal from './RentalModal'
 
 const MobileApp = () => {
     const ref1 = useRef(null)
     const ref2 = useRef(null)
     const inView1 = useInView(ref1, { once: true })
     const inView2 = useInView(ref2, { once: true })
-
+      const [isModalOpen, setIsModalOpen] = useState(false);
+    
 
 
     return (
         <>
-            <section className="bg-gray-50 py-8 md:py-0">
+            <section className="bg-gray-50 py-6 md:py-0">
                 <div
                     ref={ref1}
                     className="max-w-6xl mx-auto px-4">
-                    <div className='flex justify-center pt-10'> <Image src={'/JOJOLOGO.png'} width={150} height={150} alt='jojo-logo-dark' /></div>
+                    <div className='flex justify-center pt-0'> <Image src={'/JOJOLOGO.png'} width={150} height={150} alt='jojo-logo-dark' /></div>
                     <h1 className="text-center  text-5xl font-semibold text-primaryColor drop-shadow-lg">Rent Faster, Better Experience</h1>
                     <div className="flex flex-col md:flex-row items-center justify-center md:gap-32 w-full">
                         <motion.div
@@ -96,11 +99,26 @@ const MobileApp = () => {
                                     </div>
                                 </div>
                             </div>
+                            <div className="mt-8 md:mt-12 flex flex-col sm:flex-row gap-4">
+                                <button 
+                                onClick={() => setIsModalOpen(true)}
+                                className="inline-flex items-center px-6 py-3 bg-primaryColor text-white rounded-lg hover:bg-gray-800 transition-colors">
+                                    <div className="flex flex-col">
+                                        <span className="text-sm font-semibold">Rent Now</span>
+                                    </div>
+                                </button>
+                                <Link href={'tel:08503027210'} className="flex flex-col">
+                                    <div className="inline-flex items-center px-6 py-3 bg-transparent border-primaryColor border text-gray-800 rounded-lg">
+                                        <span className="text-xs">Call Now</span>
+                                    </div>
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-        </>
+            <RentalModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+            </>
     )
 }
 

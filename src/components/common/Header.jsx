@@ -38,7 +38,7 @@ const Header = () => {
     <>
       <motion.header
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        animate={{ opacity: 1 }}  
         transition={{ delay: 0.2 }}
         className="flex justify-center text-black sticky z-50 inset-x-0 top-0 items-center bg-white shadow-lg h-20"
       >

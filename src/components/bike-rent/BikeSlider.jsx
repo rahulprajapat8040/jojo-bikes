@@ -66,7 +66,7 @@ const BikeSlider = ({ BikesData }) => {
     }
 
     return (
-        <section className="bg-white py-16 md:py-24">
+        <section className="bg-white ">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="relative w-full">
                     <AnimatePresence mode="wait" initial={false} custom={direction}>

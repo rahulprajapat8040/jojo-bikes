@@ -1,8 +1,10 @@
 'use client'
 import { motion, useInView } from 'framer-motion'
-import { FaUsers } from "react-icons/fa";
 import { useRef } from 'react';
 import Counter from '../common/Counter';
+import { FaUsers, FaFlagCheckered } from "react-icons/fa";
+import { MdOutlineDirectionsBike } from "react-icons/md";
+import { RiCustomerService2Line } from "react-icons/ri";
 
 const Hero = ({ HeroData }) => {
     const ref1 = useRef(null)
@@ -24,7 +26,7 @@ const Hero = ({ HeroData }) => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5 }}
-                    className="px-2 my-4 md:mt-24 py-20 w-full max-w-6xl">
+                    className="px-2 my-4 py-7 w-full max-w-6xl">
 
                     <div className="flex flex-col justify-center items-center gap-3 mb-12">
                         <motion.h1
@@ -91,13 +93,39 @@ const Hero = ({ HeroData }) => {
                     </div>
                 </motion.div>
             </section>
-            <section className='w-full py-7 bg-gradient-to-t from-gray-700 to-gray-900'>
-                <div className='max-w-6xl w-full mx-auto'>
-                    <div className='flex items-center justify-center flex-col gap-3'>
-                        <div className='flex items-center flex-col gap-2'>
-                            <FaUsers size={50} color='yellow' />
-                            <Counter end={1000} duration={2500} />
-                            <p className='text-white'>Happy Customers</p>
+            <section className='w-full py-12 bg-white'>
+                <div className='max-w-6xl w-full mx-auto px-4'>
+                    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 border-b py-5'>
+                        <div className='p-6 rounded-xl text-center'>
+                            <FaUsers className='text-gray-800 mx-auto mb-4' size={50} />
+                            <div className='text-4xl font-bold text-gray-800'>
+                                <Counter end={25000} duration={2500} />
+                            </div>
+                            <p className='text-gray-600 font-semibold text-lg'>Happy Customers</p>
+                        </div>
+
+                        <div className='p-6 rounded-xl text-center'>
+                            <MdOutlineDirectionsBike className='text-gray-800 mx-auto mb-4' size={50} />
+                            <div className='text-4xl font-bold text-gray-800'>
+                                <Counter end={1000} duration={2500} />
+                            </div>
+                            <p className='text-gray-600 font-semibold text-lg'>BIKES IN GARAGE</p>
+                        </div>
+
+                        <div className='p-6 rounded-xl text-center'>
+                            <FaFlagCheckered className='text-gray-800 mx-auto mb-4' size={50} />
+                            <div className='text-4xl font-bold text-gray-800'>
+                                <Counter end={100000} duration={2500} />
+                            </div>
+                            <p className='text-gray-600 font-semibold text-lg'>TOTAL KILOMETER/MIL</p>
+                        </div>
+
+                        <div className='p-6 rounded-xl text-center'>
+                            <RiCustomerService2Line className='text-gray-800 mx-auto mb-4' size={50} />
+                            <div className='text-4xl font-bold text-gray-800'>
+                                <Counter end={50} duration={2500} />
+                            </div>
+                            <p className='text-gray-600 font-semibold text-lg'>BIKES CENTER SOLUTIONS</p>
                         </div>
                     </div>
                 </div>

@@ -2,13 +2,16 @@
 import { useRef, useState } from 'react';
 import Modal from './Modal';
 import { motion, useInView } from 'motion/react'
+import RentalModal from '../home/RentalModal';
 
 const SectionData = ({ data }) => {
     const [selectedItem, setSelectedItem] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
 
     return (
         <>
-            <section className="py-12 px-4 bg-gray-50">
+            <section className="pb-10 px-4 bg-gray-50">
                 <div className="max-w-6xl mx-auto">
                     <div>
                         <h1 className='text-center text-5xl py-6 font-semibold text-black'> Our Blogs </h1>
@@ -50,9 +53,16 @@ const SectionData = ({ data }) => {
                             )
                         })}
                     </div>
+                    <div className='mt-5 flex justify-center'>
+                    <button 
+                    onClick={() => setIsModalOpen(true)}
+                    className='px-20 py-3  text-white bg-primaryColor hover:rounded-xl rounded-md duration-150'>
+                        Rent Now
+                    </button>
+                </div>
                 </div>
             </section>
-
+            <RentalModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
             <Modal
                 isOpen={!!selectedItem}
                 onClose={() => setSelectedItem(null)}
